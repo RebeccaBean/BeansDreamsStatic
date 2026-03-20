@@ -1,0 +1,373 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #FFF5EA;
+  color: #333;
+}
+.main-nav {
+  width: 100%;
+  background: #FFD699;
+  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.main-nav a:hover {
+  color: #000;
+}
+
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #FF940E, #b50202, #FEB803, #004AAD);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-family: 'Alex Brush', cursive;
+}
+
+.slide-text {
+  font-size: 2rem;
+  color: #004AAD;
+  font-weight: bold;
+  animation: slideIn 2s ease-out forwards;
+}
+
+.lead-toggle {
+  background-color: #030998;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lead-toggle:hover {
+  background-color: #FF940E;
+  transform: scale(1.05);
+}
+.about-explore-btn {
+  display: inline-block;
+  background-color:  #b50202; /* choose any color you like */
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.about-explore-btn:hover {
+  background-color: #FF940E; /* warm orange hover */
+  transform: scale(1.05);
+}
+
+/* Logo animation */
+.logo-bounce-in {
+  width: 200px;
+  opacity: 0;
+  animation: slideDownBounce 1s ease-out forwards, bounce 2s ease-in-out infinite;
+  animation-delay: 0s, 1s;
+}
+
+@keyframes slideDownBounce {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+
+/* CLASS CARDS */
+.classes-section {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #FFF5EA;
+}
+
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.class-card {
+  padding: 2rem;
+  border-radius: 15px;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Colorful backgrounds */
+.dance { background: #FFE0B3; }
+.guitar { background: #B3C9F5; }
+.vocal { background: #F4B3B3; }
+.healing { background: #FFE89C; }
+
+/* ABOUT PREVIEW */
+.about-preview {
+  background: linear-gradient(
+    135deg,
+    #FFF5EA,
+    #FFEBD2,
+    #FFD699,
+    #FFE0B3
+  );
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about-inner {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.about-preview h2 {
+  font-family: 'Alex Brush', cursive;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #b50202;
+}
+
+.about-preview p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+.about-preview .tagline {
+  font-size: 1.3rem;
+  color: #004AAA;
+  font-weight: bold;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  background: #FFEBD2;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.carousel {
+  max-width: 600px;
+  margin: auto;
+}
+
+.testimonial {
+  display: none;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+/* FAQ */
+.faq {
+  padding: 3rem 2rem;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1rem;
+  background: #FFD699;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0.8rem;
+  background: #FFF5EA;
+  border-left: 4px solid #FF940E;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+  background: #004AAA;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+h2 {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+/* Simple orange line that fades at both ends */
+h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 260px;          /* make this larger/smaller as you like */
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #FF940E,
+    transparent
+  );
+}
+
+.lead-form-section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  position: relative;
+}
+
+.lead-form-section.hidden {
+  display: none;
+}
+
+.lead-form-section.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #FF940E;
+  color: #fff;
+  border: none;
+  font-size: 1.4rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Base card styling */
+.class-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+section h2,
+.section-title {
+  text-align: center;
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+}
+
+.class-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Pastel color variants */
+.card-peach {
+  background: #FFE8C6;
+}
+
+.card-mint {
+  background: #DFF7E6;
+}
+
+.card-lavender {
+  background: #EDE3FF;
+}
+
+.card-sunshine {
+  background: #FFF3C4;
+}
+
+.card-rose {
+  background: #FFE1E8;
+}
+
+.card-sky {
+  background: #DFF1FF;
+}
+
+.card-sage {
+  background: #E8F5E4;
+}
+
+.card-lilac {
+  background: #F3E8FF;
+}
+
+/* Grid layout */
+.class-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 2rem;
+}
+.hidden {
+  display: none;
+}
