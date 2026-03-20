@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean’s Dreams – Dance • Music • Healing</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Alex+Brush&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="classes.html">Classes</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="portal.html">Student Portal</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+
+    <div class="logo-container">
+      <img src="imageslogo/Bean's Butterfly.png" alt="Bean's Dreams butterfly logo" class="logo-bounce-in">
+    </div>
+
+    <h1 data-aos="fade-up">Welcome to Bean’s Dreams</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Empowering you through movement, music, and healing</p>
+    <h3 class="slide-text" data-aos="fade-left" data-aos-delay="400">Dance • Heal • Rise</h3>
+
+    <!-- HERO BUTTON -->
+    <button class="lead-toggle" data-target="introFormHero" aria-controls="introFormHero" aria-expanded="false">
+      🎁 Claim Your Free Intro Class
+    </button>
+
+    <!-- HERO FORM MODAL -->
+    <div id="introFormHero" class="lead-form-section hidden">
+      <button class="close-btn" data-target="introFormHero">✖</button>
+
+      <h2 class="form-heading">Free Intro Class</h2>
+
+      <iframe 
+        src="https://forms.gle/6S4sRxhA56e4fqro7" 
+        width="100%" 
+        height="800" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0"
+        style="border-radius: 12px;">
+      </iframe>
+    </div>
+
+  </div>
+</header>
+
+<!-- CLASS CARDS -->
+<section class="classes-section">
+  <h2 data-aos="fade-up">What We Offer</h2>
+
+  <div class="class-grid">
+
+    <div class="class-card dance" onclick="location.href='classes.html#dance'">
+      <div class="icon">💃</div>
+      <h3>Dance Classes</h3>
+      <p>Tap, Ballet, Jazz, Irish Dance, and Tiny Tots programs for ages 3–adult.</p>
+    </div>
+
+    <div class="class-card guitar" onclick="location.href='classes.html#guitar'">
+      <div class="icon">🎸</div>
+      <h3>Guitar Lessons</h3>
+      <p>Beginner-friendly guitar instruction including Strum & Shine, Campfire Chords, and more.</p>
+    </div>
+
+    <div class="class-card vocal" onclick="location.href='classes.html#vocal'">
+      <div class="icon">🎤</div>
+      <h3>Vocal Coaching</h3>
+      <p>Kids, teen, and adult vocal training including Jellybean Jams and Starstruck Studio.</p>
+    </div>
+
+    <div class="class-card healing" onclick="location.href='classes.html#healing'">
+      <div class="icon">🕊️</div>
+      <h3>Healing Classes</h3>
+      <p>Gentle breathwork, mindful movement, and nervous system regulation practices including Sacred Breath, Sacred Space; Heartbeat Harmony; and Alexander Technique.</p>
+    </div>
+
+  </div>
+
+  <!-- SIGN UP BUTTON BELOW CARDS -->
+  <button class="lead-toggle" data-target="introFormClasses" aria-controls="introFormClasses" aria-expanded="false">
+    Sign Up For Classes
+  </button>
+
+  <!-- SIGN UP FORM MODAL -->
+  <div id="introFormClasses" class="lead-form-section hidden">
+    <button class="close-btn" data-target="introFormClasses">✖</button>
+
+    <h2 class="form-heading">Sign Up For Classes</h2>
+
+    <iframe 
+      src="https://forms.gle/k3wS4MiE8hxk8DWQ9" 
+      width="100%" 
+      height="800" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0"
+      style="border-radius: 12px;">
+    </iframe>
+  </div>
+
+</section>
+
+</body>
+</html>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" data-aos="fade-up" aria-label="Student testimonials">
+  <h2>What Our Students Say</h2>
+
+  <div class="carousel" role="region" aria-live="polite">
+
+    <!-- Testimonial 1 -->
+    <div class="testimonial active" id="testimonial1">
+      <p>“I used to think dance was for younger people or professionals. But this program made me feel welcomed, strong, and expressive.”</p>
+      <h4>— Karen B., 47, Office Manager</h4>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial" id="testimonial2">
+      <p>“This program connected me to my body in a way nothing else has.”</p>
+      <h4>— Danielle M., 45, Entrepreneur</h4>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial" id="testimonial3">
+      <p>“It’s incredible to see your child light up. Their online classes helped my daughter express herself in ways I never imagined.”</p>
+      <h4>— Janine H., Parent</h4>
+    </div>
+
+    <!-- Testimonial 4 -->
+    <div class="testimonial" id="testimonial4">
+      <p>“I started guitar with zero experience. Now I play confidently thanks to the Campfire Chords Class!”</p>
+      <h4>— James M., 21</h4>
+    </div>
+
+    <!-- Testimonial 5 -->
+    <div class="testimonial" id="testimonial5">
+      <p>“Rebecca helped me rediscover my love for dance. Her warmth and guidance made all the difference.”</p>
+      <h4>— Sarah L.</h4>
+    </div>
+
+  </div>
+</section>
+<!-- ABOUT PREVIEW / MISSION -->
+<section class="about-preview">
+  <div class="about-inner" data-aos="fade-up">
+    <h2>Our Mission</h2>
+
+    <p>
+      <strong>Bean’s Dreams was founded on my belief that movement, music, and creativity can transform confidence from the inside out.</strong>
+      With decades of experience in dance, music, and expressive arts, I’ve dedicated my work to creating a space where students feel supported, encouraged, and empowered to grow.
+    </p>
+
+    <p>
+      Every class is shaped by a commitment to building self‑esteem, nurturing creativity, and helping each person discover their own strength and voice. My mission is to guide students toward greater confidence and emotional growth through the healing power of the arts, offering a space where they can rise into their fullest, most authentic selves.
+    </p>
+
+    <p class="tagline">
+      <em>At Bean’s Dreams, you’re not just learning—you’re becoming.</em>
+    </p>
+  </div>
+</section>
+
+
+
+ <!-- FAQ -->
+<section class="faq" data-aos="fade-up">
+  <h2>Frequently Asked Questions</h2>
+
+  <!-- FAQ 1 -->
+  <div class="faq-item" data-aos="fade-left" data-aos-delay="200">
+    <button class="faq-question slide-text" aria-expanded="false" aria-controls="faq1">
+      📅 How do I book a class?
+    </button>
+    <div id="faq1" class="faq-answer" hidden>
+      Fill out the form and a PayPal link and scheduling will be sent via email.
+    </div>
+  </div>
+
+  <!-- FAQ 2 -->
+  <div class="faq-item" data-aos="fade-left" data-aos-delay="400">
+    <button class="faq-question slide-text" aria-expanded="false" aria-controls="faq2">
+      ⏱️ How long are the sessions?
+    </button>
+    <div id="faq2" class="faq-answer" hidden>
+      Dance & music lessons are 30 minutes.
+    </div>
+  </div>
+
+  <!-- FAQ 3 -->
+  <div class="faq-item" data-aos="fade-left" data-aos-delay="500">
+    <button class="faq-question slide-text" aria-expanded="false" aria-controls="faq3">
+      💳 How do payments work?
+    </button>
+    <div id="faq3" class="faq-answer" hidden>
+      Payments are handled securely online before booking.
+    </div>
+  </div>
+
+  <!-- FAQ 4 -->
+  <div class="faq-item" data-aos="fade-left" data-aos-delay="600">
+    <button class="faq-question slide-text" aria-expanded="false" aria-controls="faq4">
+      🎁 Do you offer a free intro class?
+    </button>
+    <div id="faq4" class="faq-answer" hidden>
+      Yes! Claim your free intro session above.
+    </div>
+  </div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Bean’s Dreams. All rights reserved.</p>
+</footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
