@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal – Bean’s Dreams</title>
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Alex+Brush&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="classes.html">Classes</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="portal.html">Student Portal</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero classes-hero">
+  <div class="hero-content">
+    <div class="logo-container">
+  <a href="index.html">
+    <img src="imageslogo/Bean's Butterfly.png" alt="Bean's Dreams butterfly logo" class="logo-bounce-in">
+  </a>
+</div>
+
+    <h1 data-aos="fade-up">Student Portal</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Resources • Meetings • Forms • Progress</p>
+    <h3 class="slide-text" data-aos="fade-left" data-aos-delay="400">Everything you need for your learning journey</h3>
+  </div>
+</header>
+
+<!-- LOGIN SECTION -->
+<section class="classes-section" id="portal-login">
+  <h2 data-aos="fade-up">Sign In</h2>
+
+  <div class="class-grid" style="max-width:500px; margin:auto;">
+
+    <div class="class-card card-lavender" data-aos="zoom-in" style="text-align:center;">
+      <div class="class-icon">🔐</div>
+      <h3>Student Login</h3>
+      <p>Enter the studio password to access your materials.</p>
+
+      <input type="password" id="portalPassword" placeholder="Enter password"
+             style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc; margin-top:10px; font-size:1rem;">
+
+      <button onclick="checkPassword()" class="lead-toggle about-signup-btn" style="margin-top:15px;">
+        Sign In
+      </button>
+
+      <p id="loginError" style="color:#b50202; font-weight:bold; display:none; margin-top:10px;">
+        Incorrect password. Please try again.
+      </p>
+
+      <p style="margin-top:10px;">
+        <a href="contact.html">Forgot password?</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTAL CONTENT -->
+<section class="classes-section hidden" id="portalContent">
+  <h2 data-aos="fade-up">Welcome to Your Portal</h2>
+
+  <div class="class-grid">
+
+    <!-- WELCOME PACKET -->
+    <div class="class-card card-peach" data-aos="zoom-in">
+      <div class="class-icon">📄</div>
+      <h3>Welcome Packet</h3>
+      <p>Studio policies, expectations, and helpful information.</p>
+      <a href="https://canva.link/85kqv3od8mryaid" class="lead-toggle" target="_blank">Download Packet</a>
+    </div>
+
+    <!-- ONLINE LESSONS -->
+    <div class="class-card card-mint" data-aos="zoom-in">
+      <div class="class-icon">🎥</div>
+      <h3>Online Lessons</h3>
+      <p>Join your scheduled Zoom or Google Meet session.</p>
+      <a href="https://zoom.us/j/794 404 9413 " class="lead-toggle" target="_blank">Join Zoom</a>
+      <a href="https://meet.google.com/urr-zhqu-gkj" class="lead-toggle" target="_blank">Join Meet</a>
+    </div>
+
+  <!-- CONSENT FORM -->
+<div class="class-card card-sage" data-aos="zoom-in">
+  <div class="class-icon">📝</div>
+  <h3>Liability & Consent Form</h3>
+  <p>Required for participation in all classes.</p>
+
+  <button class="lead-toggle" data-target="consentForm" aria-controls="consentForm" aria-expanded="false">
+    Open Form
+  </button>
+</div>
+
+<div id="consentForm" class="lead-form-section hidden">
+  <button class="close-btn" data-target="consentForm">✖</button>
+  <h2 class="form-heading">Liability & Consent Form</h2>
+
+  <iframe 
+    src="https://forms.gle/NcCXN5JunHQVYLsx7"
+    width="100%" 
+    height="800" 
+    frameborder="0"
+    style="border-radius:12px;">
+  </iframe>
+</div>
+
+
+<!-- FEEDBACK FORM -->
+<div class="class-card card-rose" data-aos="zoom-in">
+  <div class="class-icon">💬</div>
+  <h3>Feedback Form</h3>
+  <p>Share your thoughts to help us grow.</p>
+
+  <button class="lead-toggle" data-target="feedbackForm" aria-controls="feedbackForm" aria-expanded="false">
+    Give Feedback
+  </button>
+</div>
+
+<div id="feedbackForm" class="lead-form-section hidden">
+  <button class="close-btn" data-target="feedbackForm">✖</button>
+  <h2 class="form-heading">Feedback Form</h2>
+
+  <iframe 
+    src="https://forms.gle/fMiTYsJnq4GuAW1o9"
+    width="100%" 
+    height="800" 
+    frameborder="0"
+    style="border-radius:12px;">
+  </iframe>
+</div>
+
+
+<!-- RESCHEDULE FORM -->
+<div class="class-card card-sunshine" data-aos="zoom-in">
+  <div class="class-icon">📆</div>
+  <h3>Reschedule a Lesson</h3>
+  <p>Request a new appointment time.</p>
+
+  <button class="lead-toggle" data-target="rescheduleForm" aria-controls="rescheduleForm" aria-expanded="false">
+    Reschedule
+  </button>
+</div>
+
+<div id="rescheduleForm" class="lead-form-section hidden">
+  <button class="close-btn" data-target="rescheduleForm">✖</button>
+  <h2 class="form-heading">Reschedule a Lesson</h2>
+
+  <iframe 
+    src="https://forms.gle/Y4ZEK8uEUYFNwuvZ9"
+    width="100%" 
+    height="800" 
+    frameborder="0"
+    style="border-radius:12px;">
+  </iframe>
+</div>
+
+
+<!-- GOAL TRACKER -->
+<div class="class-card card-lavender" data-aos="zoom-in">
+  <div class="class-icon">🎯</div>
+  <h3>Goal Tracker</h3>
+  <p>Track your weekly progress and achievements.</p>
+
+  <button class="lead-toggle" data-target="goalTracker" aria-controls="goalTracker" aria-expanded="false">
+    Open Tracker
+  </button>
+</div>
+
+<div id="goalTracker" class="lead-form-section hidden">
+  <button class="close-btn" data-target="goalTracker">✖</button>
+  <h2 class="form-heading">Goal Tracker</h2>
+
+  <p style="margin-bottom:1rem;">
+    Click below to open your goal tracker.<br>
+    Choose <strong>File → Make a Copy</strong> to save your personal version.
+  </p>
+
+  <a href="https://docs.google.com/spreadsheets/d/1ZTBG_WWoG2vTxdDnAb52qViFSf1nmSph-NQo4FrKssw/edit?usp=sharing" class="cta-button" target="_blank">
+    Open Goal Tracker
+  </a>
+</div>
+    
+    </section>
+  <!-- RETURNING STUDENT SECTION -->
+<section class="classes-section" id="returning-students" data-aos="fade-up">
+  <h2>Returning Student Registration</h2>
+
+  <p style="max-width:700px; margin:auto; text-align:center;">
+    Welcome back! Please complete the steps below to register for your next class.
+  </p>
+
+  <div class="class-grid">
+
+    <!-- STEP 1: REGISTRATION FORM CARD -->
+    <div class="class-card card-mint" data-aos="zoom-in">
+      <div class="class-icon">📝</div>
+      <h3>Step 1: Registration Form</h3>
+      <p>Select the class you're signing up for this session.</p>
+
+      <button class="lead-toggle" data-target="returningForm" aria-controls="returningForm" aria-expanded="false">
+        Open Returning Student Form
+      </button>
+    </div>
+
+    <!-- EMBEDDED RETURNING STUDENT FORM -->
+    <div id="returningForm" class="lead-form-section hidden">
+      <button class="close-btn" data-target="returningForm">✖</button>
+      <h2 class="form-heading">Returning Student Registration</h2>
+
+      <iframe 
+        src="https://forms.gle/w129XkeYh8KUvsDRA"
+        width="100%" 
+        height="800" 
+        frameborder="0"
+        style="border-radius:12px;">
+      </iframe>
+    </div>
+
+
+   <!-- STEP 2: PAYMENT CARD -->
+<div class="class-card card-peach" data-aos="zoom-in">
+  <div class="class-icon">💳</div>
+  <h3>Step 2: Make Your Payment</h3>
+  <p>Secure PayPal payment to confirm your spot.</p>
+
+  <form action="https://www.paypal.com/ncp/payment/76CKLFEXTCJFQ" 
+        method="post" 
+        target="_blank" 
+        style="display:flex; flex-direction:column; align-items:center; gap:0.5rem; margin-top:1rem;">
+
+    <style>
+      .pp-76CKLFEXTCJFQ {
+        text-align:center;
+        border:none;
+        border-radius:0.25rem;
+        min-width:11.625rem;
+        padding:0 2rem;
+        height:2.625rem;
+        font-weight:bold;
+        background-color:#FFD140;
+        color:#000000;
+        font-family:"Helvetica Neue", Arial, sans-serif;
+        font-size:1rem;
+        line-height:1.25rem;
+        cursor:pointer;
+      }
+    </style>
+
+    <input class="pp-76CKLFEXTCJFQ" type="submit" value="Pay $30" />
+
+    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" 
+         alt="cards" 
+         style="height:22px;" />
+
+    <section style="font-size:0.75rem;">
+      Powered by 
+      <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" 
+           alt="paypal" 
+           style="height:0.875rem; vertical-align:middle;" />
+    </section>
+  </form>
+</div>
+  </div>
+  
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Bean’s Dreams. All rights reserved.</p>
+</footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- LOGIN SCRIPT -->
+<script>
+function checkPassword() {
+  const correctPassword = "dreamportal";
+  const input = document.getElementById("portalPassword").value;
+  const error = document.getElementById("loginError");
+  const content = document.getElementById("portalContent");
+
+  if (input === correctPassword) {
+    error.style.display = "none";
+    content.classList.remove("hidden");
+    content.scrollIntoView({ behavior: "smooth" });
+  } else {
+    error.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
