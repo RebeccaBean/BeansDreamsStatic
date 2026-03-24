@@ -15,8 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
         form.classList.remove("hidden");
         form.classList.add("visible");
         button.setAttribute("aria-expanded", "true");
+        // ⭐ Wait for the CSS transition to start, then scroll
+      setTimeout(() => {
         form.scrollIntoView({ behavior: "smooth", block: "start" });
-
+      }, 50);
       }
     });
   });
