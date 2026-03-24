@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
         form.classList.remove("hidden");
         form.classList.add("visible");
         button.setAttribute("aria-expanded", "true");
+        form.scrollIntoView({ behavior: "smooth", block: "start" });
+
       }
     });
   });
