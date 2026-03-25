@@ -4,6 +4,8 @@ body {
   background: #FFF5EA;
   color: #333;
 }
+
+/* NAVIGATION */
 .main-nav {
   width: 100%;
   background: #FFD699;
@@ -21,6 +23,13 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap; /* ⭐ FIX: Prevents cutoff on small phones */
+}
+
+@media (max-width: 480px) {
+  .main-nav ul {
+    gap: 1rem; /* ⭐ Optional improvement for tiny screens */
+  }
 }
 
 .main-nav a {
@@ -33,7 +42,6 @@ body {
 .main-nav a:hover {
   color: #000;
 }
-
 
 /* HERO */
 .hero {
@@ -72,9 +80,10 @@ body {
   background-color: #FF940E;
   transform: scale(1.05);
 }
+
 .about-explore-btn {
   display: inline-block;
-  background-color:  #b50202; /* choose any color you like */
+  background-color: #b50202;
   color: white;
   padding: 0.8rem 1.6rem;
   border-radius: 30px;
@@ -88,7 +97,7 @@ body {
 }
 
 .about-explore-btn:hover {
-  background-color: #FF940E; /* warm orange hover */
+  background-color: #FF940E;
   transform: scale(1.05);
 }
 
@@ -110,7 +119,6 @@ body {
   50% { transform: translateY(-8px); }
 }
 
-
 /* CLASS CARDS */
 .classes-section {
   padding: 3rem 2rem;
@@ -120,9 +128,16 @@ body {
 
 .class-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin-top: 2rem;
+}
+
+/* ⭐ FIX: Force stacking on mobile for ALL grids */
+@media (max-width: 768px) {
+  .class-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .class-card {
@@ -244,19 +259,20 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
 h2 {
   position: relative;
   padding-bottom: 2rem;
 }
 
-/* Simple orange line that fades at both ends */
+/* Orange line under headings */
 h2::after {
   content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: 260px;          /* make this larger/smaller as you like */
+  width: 260px;
   height: 4px;
   border-radius: 999px;
   background: linear-gradient(
@@ -267,6 +283,7 @@ h2::after {
   );
 }
 
+/* Lead Form */
 .lead-form-section {
   max-width: 700px;
   margin: 2rem auto;
@@ -307,67 +324,17 @@ h2::after {
 html {
   scroll-behavior: smooth;
 }
-/* Base card styling */
-.class-card {
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-section h2,
-.section-title {
-  text-align: center;
-}
 
-.class-card:hover {
-  transform: translateY(-5px);
-}
+/* Pastel card variants */
+.card-peach { background: #FFE8C6; }
+.card-mint { background: #DFF7E6; }
+.card-lavender { background: #EDE3FF; }
+.card-sunshine { background: #FFF3C4; }
+.card-rose { background: #FFE1E8; }
+.card-sky { background: #DFF1FF; }
+.card-sage { background: #E8F5E4; }
+.card-lilac { background: #F3E8FF; }
 
-.class-icon {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Pastel color variants */
-.card-peach {
-  background: #FFE8C6;
-}
-
-.card-mint {
-  background: #DFF7E6;
-}
-
-.card-lavender {
-  background: #EDE3FF;
-}
-
-.card-sunshine {
-  background: #FFF3C4;
-}
-
-.card-rose {
-  background: #FFE1E8;
-}
-
-.card-sky {
-  background: #DFF1FF;
-}
-
-.card-sage {
-  background: #E8F5E4;
-}
-
-.card-lilac {
-  background: #F3E8FF;
-}
-
-/* Grid layout */
-.class-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  margin-top: 2rem;
-}
 .hidden {
   display: none;
 }
