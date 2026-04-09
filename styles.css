@@ -4,8 +4,6 @@ body {
   background: #FFF5EA;
   color: #333;
 }
-
-/* NAVIGATION */
 .main-nav {
   width: 100%;
   background: #FFD699;
@@ -23,13 +21,6 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap; /* ⭐ FIX: Prevents cutoff on small phones */
-}
-
-@media (max-width: 480px) {
-  .main-nav ul {
-    gap: 1rem; /* ⭐ Optional improvement for tiny screens */
-  }
 }
 
 .main-nav a {
@@ -40,25 +31,82 @@ body {
 }
 
 .main-nav a:hover {
-  color: #000;
+  color: #FF940E;
+}
+.index-page .main-nav a[href="index.html"],
+.classes-page .main-nav a[href="classes.html"],
+.blog-page .main-nav a[href="blog.html"],
+.about-page .main-nav a[href="about.html"],
+.contact-page .main-nav a[href="contact.html"],
+.portal-page .main-nav a[href="portal.html"] {
+  color: #b50202;
+  border-bottom: 3px solid #b50202;
 }
 
-/* HERO */
+/* HERO — universal layout + text */
 .hero {
-  background: linear-gradient(135deg, #FF940E, #b50202, #FEB803, #004AAD);
-  color: white;
+  position: relative;
   padding: 5rem 2rem;
   text-align: center;
+  color: #FFE89C;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+/* Universal dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+/* Ensure hero content sits above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* PAGE‑SPECIFIC HERO BACKGROUNDS */
+.index-hero {
+  background-image: url('https://images.unsplash.com/photo-1550026593-f369f98df0af?q=80&w=1170&auto=format&fit=crop');
+}
+
+.classes-hero {
+  background-image: url('https://images.unsplash.com/photo-1677603142181-6e49eb1a3c10?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.blog-hero {
+  background-image: url('https://images.unsplash.com/photo-1471478331149-c72f17e33c73?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.about-hero {
+  background-image: url('https://images.unsplash.com/photo-1633966849409-15619ac38fff?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.portal-hero {
+  background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.contact-hero {
+  background-image: url('https://plus.unsplash.com/premium_photo-1763922900688-3af88b6be352?q=80&w=1138&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+/* HERO TYPOGRAPHY */
 .hero h1 {
   font-size: 3rem;
   font-family: 'Alex Brush', cursive;
 }
 
+
 .slide-text {
   font-size: 2rem;
-  color: #004AAD;
+  color: #B3C9F5;
   font-weight: bold;
   animation: slideIn 2s ease-out forwards;
 }
@@ -80,10 +128,9 @@ body {
   background-color: #FF940E;
   transform: scale(1.05);
 }
-
 .about-explore-btn {
   display: inline-block;
-  background-color: #b50202;
+  background-color:  #b50202; /* choose any color you like */
   color: white;
   padding: 0.8rem 1.6rem;
   border-radius: 30px;
@@ -97,7 +144,7 @@ body {
 }
 
 .about-explore-btn:hover {
-  background-color: #FF940E;
+  background-color: #FF940E; /* warm orange hover */
   transform: scale(1.05);
 }
 
@@ -119,6 +166,7 @@ body {
   50% { transform: translateY(-8px); }
 }
 
+
 /* CLASS CARDS */
 .classes-section {
   padding: 3rem 2rem;
@@ -128,16 +176,9 @@ body {
 
 .class-grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
-}
-
-/* ⭐ FIX: Force stacking on mobile for ALL grids */
-@media (max-width: 768px) {
-  .class-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .class-card {
@@ -259,20 +300,19 @@ footer {
   text-align: center;
   padding: 1rem;
 }
-
 h2 {
   position: relative;
   padding-bottom: 2rem;
 }
 
-/* Orange line under headings */
+/* Simple orange line that fades at both ends */
 h2::after {
   content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: 260px;
+  width: 260px;          /* make this larger/smaller as you like */
   height: 4px;
   border-radius: 999px;
   background: linear-gradient(
@@ -283,7 +323,6 @@ h2::after {
   );
 }
 
-/* Lead Form */
 .lead-form-section {
   max-width: 700px;
   margin: 2rem auto;
@@ -324,17 +363,67 @@ h2::after {
 html {
   scroll-behavior: smooth;
 }
+/* Base card styling */
+.class-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+section h2,
+.section-title {
+  text-align: center;
+}
 
-/* Pastel card variants */
-.card-peach { background: #FFE8C6; }
-.card-mint { background: #DFF7E6; }
-.card-lavender { background: #EDE3FF; }
-.card-sunshine { background: #FFF3C4; }
-.card-rose { background: #FFE1E8; }
-.card-sky { background: #DFF1FF; }
-.card-sage { background: #E8F5E4; }
-.card-lilac { background: #F3E8FF; }
+.class-card:hover {
+  transform: translateY(-5px);
+}
 
+.class-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Pastel color variants */
+.card-peach {
+  background: #FFE8C6;
+}
+
+.card-mint {
+  background: #DFF7E6;
+}
+
+.card-lavender {
+  background: #EDE3FF;
+}
+
+.card-sunshine {
+  background: #FFF3C4;
+}
+
+.card-rose {
+  background: #FFE1E8;
+}
+
+.card-sky {
+  background: #DFF1FF;
+}
+
+.card-sage {
+  background: #E8F5E4;
+}
+
+.card-lilac {
+  background: #F3E8FF;
+}
+
+/* Grid layout */
+.class-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 2rem;
+}
 .hidden {
   display: none;
 }
