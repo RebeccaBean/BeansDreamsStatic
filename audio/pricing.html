@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Nick's Mixes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Nick's Mixes</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn">Book Now</a>
+    </nav>
+</header>
+
+<section class="sub-hero pricing-hero">
+    <h1>Pricing</h1>
+    <p>Clear, straightforward pricing for professional audio editing and engineering.</p>
+</section>
+
+<section class="pricing-page">
+    <h2>Choose the Service That Fits Your Needs</h2>
+
+    <div class="price-card neon-card" data-animate>
+
+        <h3>Simple Fade‑Out</h3>
+        <p class="price">$10</p>
+        <ul>
+            <li>Clean, professional fade‑out</li>
+            <li>Custom fade length to match timing</li>
+            <li>No pops, clicks, or abrupt cuts</li>
+            <li>Delivered in high‑quality digital format</li>
+        </ul>
+    </div>
+
+    <div class="price-card neon-card" data-animate>
+
+        <h3>Basic Dance Edit</h3>
+        <p class="price">$35</p>
+        <ul>
+            <li>Simple cuts & rearrangements</li>
+            <li>Clean transitions</li>
+            <li>Timing adjustments</li>
+            <li>Delivered in high‑quality digital format</li>
+        </ul>
+    </div>
+
+    <div class="price-card neon-card" data-animate>
+
+        <h3>Advanced Performance Mix</h3>
+        <p class="price">$60</p>
+        <ul>
+            <li>Complex edits & transitions</li>
+            <li>Energy shaping for choreography</li>
+            <li>Multiple sections restructured</li>
+            <li>Optional tempo adjustments</li>
+        </ul>
+    </div>
+
+    <div class="price-card neon-card" data-animate>
+
+        <h3>Remix‑Style Transformation</h3>
+        <p class="price">$85</p>
+        <ul>
+            <li>Creative restructuring</li>
+            <li>Build‑ups, drops, and dynamic flow</li>
+            <li>Multi‑song medleys (client provides all tracks)</li>
+            <li>Mastered‑style final polish</li>
+        </ul>
+    </div>
+
+    <div class="price-card neon-card" data-animate>
+
+        <h3>Audio Cleanup & Enhancement</h3>
+        <p class="price">$25</p>
+        <ul>
+            <li>Noise reduction</li>
+            <li>EQ balancing</li>
+            <li>Volume leveling</li>
+            <li>Clarity enhancement</li>
+        </ul>
+    </div>
+
+    <div class="service-note" data-animate>
+        <p><strong>Important:</strong> All pricing reflects labor only. Clients must provide their own legally obtained music. Nick does not supply copyrighted audio.</p>
+    </div>
+
+    <div style="grid-column: 1 / -1; text-align:center;">
+        <a href="contact.html" class="cta-btn">Book Your Edit</a>
+</section>
+
+<footer>
+    <p>© 2026 Nick's Mixes — Audio Engineering & Dance Music Editing</p>
+</footer>
+
+<!-- Scroll animation script -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll("[data-animate]");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+/* --------------------------------------------------
+   GLOBAL RESET & BASE
+-------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #00c6ff;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 6px 10px;
+    transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #00c6ff;
+}
+
+nav .btn {
+    background: #00c6ff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #000;
+    font-weight: bold;
+}
+
+/* --------------------------------------------------
+   HERO SECTIONS
+-------------------------------------------------- */
+.hero,
+.sub-hero {
+    padding: 180px 20px 100px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* HOME PAGE HERO */
+.hero {
+    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
+        url('https://images.unsplash.com/photo-1518972559570-7cc1309f3229?auto=format&fit=crop&w=1400&q=80');
+}
+
+/* PRICING PAGE HERO */
+.sub-hero.pricing-hero {
+    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
+        url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1400&q=80');
+}
+
+/* ABOUT PAGE HERO — NOW MATCHES OTHER PAGES */
+.sub-hero.about-hero {
+    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
+        url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1920&q=80');
+}
+
+/* SERVICES PAGE HERO */
+.sub-hero.services-hero {
+    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
+        url('https://images.unsplash.com/photo-1500702790369-fe461685b3c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+/* CONTACT PAGE HERO */
+.sub-hero.contact-hero {
+    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
+        url('https://images.unsplash.com/photo-1567598110120-04e7c2390863?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+/* HERO TEXT */
+.hero h1,
+.sub-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.hero p,
+.sub-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* --------------------------------------------------
+   BUTTONS
+-------------------------------------------------- */
+.cta-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #b300ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #d24dff;
+}
+
+/* --------------------------------------------------
+   CARDS (Services + Pricing)
+-------------------------------------------------- */
+.service-block,
+.price-card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    margin: 20px auto;
+    max-width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.service-block:hover,
+.price-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 198, 255, 0.25);
+}
+
+.price-card .price {
+    font-size: 2rem;
+    color: #b300ff;
+    margin-bottom: 20px;
+}
+
+/* Responsive pricing grid */
+.pricing-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+/* Cards inside the grid */
+.price-card {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/* --------------------------------------------------
+   CONTACT FORM
+-------------------------------------------------- */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+    background: #1a1a1a;
+    color: white;
+}
+
+/* --------------------------------------------------
+   AOS‑STYLE SCROLL ANIMATIONS
+-------------------------------------------------- */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+[data-animate].visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1,
+    .sub-hero h1 {
+        font-size: 1.9rem;
+    }
+
+}
+/* Neon border hover effect */
+.neon-card {
+    border: 1px solid #2a2a2a;
+    transition: 0.3s ease;
+}
+
+.neon-card:hover {
+    border-color: #00c6ff;
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.6),
+                0 0 30px rgba(179, 0, 255, 0.4);
+    transform: translateY(-8px) scale(1.03);
+}
+.pricing-page h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-page h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #00c6ff, #b300ff);
+    margin: 10px auto 0;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 198, 255, 0.7);
+}
+.pricing-page .service-note {
+    grid-column: 1 / -1;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+h3 {
+    color: #00c6ff;
+}
+/* FAQ ACCORDION */
+.faq-item {
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Question Button */
+.faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    color: #00c6ff;
+}
+
+/* Icon */
+.faq-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Answer Panel */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 15px 0 20px;
+    opacity: 0.9;
+}
+
+/* When Open */
+.faq-item.open .faq-answer {
+    max-height: 300px;
+    padding: 0 20px 20px;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* Glow Border Enhancement */
+.faq-item.neon-card {
+    border: 1px solid #2a2a2a;
+    transition: 0.3s ease;
+}
+
+.faq-item.neon-card:hover {
+    border-color: #00c6ff;
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.6),
+                0 0 30px rgba(179, 0, 255, 0.4);
+}

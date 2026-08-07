@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nick's Mixes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Nick's Mixes</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn">Book Now</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="sub-hero">
+    <h1>Portfolio</h1>
+    <p>Listen to examples of my editing, engineering, and dance‑performance mixes.</p>
+</section>
+
+<!-- PORTFOLIO GRID -->
+<section class="pricing-page">
+
+    <h2>Featured Work</h2>
+
+    <!-- CARD 1 -->
+    <div class="service-block neon-card" data-animate>
+        <h3>Competition Dance Edit</h3>
+        <p>A high‑energy, tightly‑timed edit created for a competitive solo routine.</p>
+        <audio controls style="width:100%; margin-top:15px;">
+            <source src="audio/sample1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="service-block neon-card" data-animate>
+        <h3>Studio Recital Medley</h3>
+        <p>A multi‑song medley crafted from client‑provided tracks for a studio’s annual recital.</p>
+        <audio controls style="width:100%; margin-top:15px;">
+            <source src="audio/sample2.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="service-block neon-card" data-animate>
+        <h3>Audio Cleanup & Restoration</h3>
+        <p>Noise reduction, EQ balancing, and clarity enhancement for an older recording.</p>
+        <audio controls style="width:100%; margin-top:15px;">
+            <source src="audio/sample3.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+</section>
+
+<!-- SECOND ROW -->
+<section class="pricing-page">
+
+    <h2>More Examples</h2>
+
+    <!-- CARD 4 -->
+    <div class="service-block neon-card" data-animate>
+        <h3>Remix‑Style Transformation</h3>
+        <p>A creative restructuring of a client’s track to match a themed performance.</p>
+        <audio controls style="width:100%; margin-top:15px;">
+            <source src="audio/sample4.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="service-block neon-card" data-animate>
+        <h3>Tempo‑Adjusted Edit</h3>
+        <p>A tempo‑matched edit designed to fit choreography pacing perfectly.</p>
+        <audio controls style="width:100%; margin-top:15px;">
+            <source src="audio/sample5.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="service-block neon-card" data-animate>
+        <h3>Custom Ending Creation</h3>
+        <p>A dramatic ending built from the client’s track for a competition finale.</p>
+        <audio controls style="width:100%; margin-top:15px;">
+            <source src="audio/sample6.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+</section>
+
+<footer style="text-align:center; padding: 40px 0; opacity: 0.7;">
+    <p>© 2026 Nick's Mixes — Audio Engineering & Dance Music Editing</p>
+</footer>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll("[data-animate]");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>

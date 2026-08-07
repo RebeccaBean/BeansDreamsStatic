@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Nick's Mixes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">Nick's Mixes</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn">Book Now</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="sub-hero services-hero">
+    <h1>Audio Engineering & Dance‑Music Editing Services</h1>
+    <p>Professional editing for your legally obtained music — crafted with over 40 years of experience.</p>
+</section>
+
+<!-- MAIN SERVICES SECTION -->
+<main class="pricing-page">
+
+    <h2>What I Can Do For You</h2>
+
+    <div class="service-block neon-card" data-animate>
+        <h3>Custom Dance Edits</h3>
+        <p>Perfect for dancers, studios, and performers who need music tailored to choreography.</p>
+        <ul>
+            <li>Cutting and rearranging sections</li>
+            <li>Beat‑matched transitions</li>
+            <li>Energy shaping for choreography</li>
+            <li>Ending creation and fade‑outs</li>
+        </ul>
+    </div>
+
+    <div class="service-block neon-card" data-animate>
+        <h3>Professional Audio Engineering</h3>
+        <p>Enhancing your audio for clarity, balance, and impact.</p>
+        <ul>
+            <li>EQ balancing and leveling</li>
+            <li>Noise reduction and cleanup</li>
+            <li>Volume normalization</li>
+            <li>Mastering‑style polish</li>
+        </ul>
+    </div>
+
+    <div class="service-block neon-card" data-animate>
+        <h3>Remix‑Style Transformations</h3>
+        <p>Creative restructuring to match a mood, theme, or performance concept.</p>
+        <ul>
+            <li>Creative rearrangements</li>
+            <li>Tempo adjustments</li>
+            <li>Beat drops and build‑ups</li>
+            <li>Multi‑song medleys</li>
+        </ul>
+    </div>
+
+    <div class="service-block neon-card" data-animate>
+        <h3>Format Transfers & Restoration</h3>
+        <p>Cleanup and conversion of older recordings.</p>
+        <ul>
+            <li>Record → CD</li>
+            <li>Cassette → CD</li>
+            <li>CD → Digital</li>
+            <li>Audio cleanup</li>
+        </ul>
+    </div>
+
+    <div class="service-note" data-animate>
+        <p><strong>Important:</strong> All services require the client to provide their own legally obtained music.</p>
+    </div>
+
+    <div style="grid-column: 1 / -1; text-align:center;">
+        <a href="contact.html" class="cta-btn">Request an Edit</a>
+    </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding: 40px 0; opacity: 0.7;">
+    <p>© 2026 Nick's Mixes — Audio Engineering & Dance Music Editing</p>
+</footer>
+
+<!-- SCROLL ANIMATIONS -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll("[data-animate]");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>

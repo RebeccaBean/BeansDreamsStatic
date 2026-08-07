@@ -1,0 +1,1031 @@
+/*==================================================
+  Rebecca Bean Consulting
+  Warm Professional Design System
+==================================================*/
+
+
+/*=========================
+  BRAND VARIABLES
+=========================*/
+
+:root {
+
+    --navy: #004AAD;
+    --orange: #FF940E;
+    --gold: #FEB803;
+    --cream: #FFEBD2;
+
+    --warm-bg: #FFF9F2;
+    --light-bg: #F7F9FC;
+
+    --dark: #222222;
+    --gray: #666666;
+    --white: #FFFFFF;
+
+    --border: #E8E8E8;
+
+    --radius: 14px;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+/*=========================
+  RESET
+=========================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Open Sans", Arial, sans-serif;
+
+    color: var(--dark);
+
+    line-height: 1.7;
+
+    background: var(--white);
+
+}
+
+
+img {
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+a {
+
+    text-decoration:none;
+
+}
+
+
+
+/*=========================
+  TYPOGRAPHY
+=========================*/
+
+
+h1,
+h2,
+h3 {
+
+    font-family:"Poppins", Arial, sans-serif;
+
+    color:var(--navy);
+
+    line-height:1.2;
+
+}
+
+
+h1 {
+
+    font-size:3.5rem;
+
+    margin-bottom:25px;
+
+}
+
+
+h2 {
+
+    font-size:2.4rem;
+
+    margin-bottom:20px;
+
+}
+
+
+h3 {
+
+    font-size:1.25rem;
+
+    margin-bottom:12px;
+
+}
+
+
+p {
+
+    margin-bottom:20px;
+
+}
+
+
+.eyebrow {
+
+    color:var(--orange);
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+
+
+/*=========================
+  CONTAINER
+=========================*/
+
+
+.container {
+
+    width:min(1120px, 92%);
+
+    margin:auto;
+
+}
+
+
+
+/*=========================
+  BUTTONS
+=========================*/
+
+
+.btn {
+
+    display:inline-block;
+
+    padding:15px 30px;
+
+    border-radius:var(--radius);
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+
+.btn-primary {
+
+    background:var(--orange);
+
+    color:white;
+
+}
+
+
+.btn-primary:hover {
+
+    transform:translateY(-3px);
+
+}
+
+
+.btn-secondary {
+
+    border:2px solid var(--navy);
+
+    color:var(--navy);
+
+    background:white;
+
+}
+
+
+.btn-secondary:hover {
+
+    background:var(--navy);
+
+    color:white;
+
+}
+
+
+
+/*=========================
+  HEADER
+=========================*/
+
+
+.site-header {
+
+    background:white;
+
+    border-bottom:1px solid var(--border);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+
+.nav-container {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+
+
+.logo a {
+
+    font-family:"Poppins";
+
+    font-weight:700;
+
+    font-size:1.45rem;
+
+    color:var(--navy);
+
+}
+
+
+
+.logo span {
+
+    display:block;
+
+    font-family:"Open Sans";
+
+    font-size:.8rem;
+
+    color:var(--gray);
+
+    font-weight:400;
+
+}
+
+
+
+.main-nav {
+
+    display:flex;
+
+    gap:28px;
+
+}
+
+
+
+.main-nav a {
+
+    color:var(--dark);
+
+    font-weight:600;
+
+}
+
+
+
+.main-nav a:hover {
+
+    color:var(--orange);
+
+}
+
+
+
+/*=========================
+  HERO
+=========================*/
+
+
+.hero {
+
+    background:
+
+    linear-gradient(
+        180deg,
+        white,
+        var(--warm-bg)
+    );
+
+    padding:100px 0;
+
+}
+
+
+
+.hero-grid {
+
+    display:grid;
+
+    grid-template-columns:1.7fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+
+
+.hero-text {
+
+    font-size:1.15rem;
+
+    color:var(--gray);
+
+}
+
+
+
+.hero-buttons {
+
+    margin-top:35px;
+
+}
+
+
+
+.hero-buttons .btn {
+
+    margin-right:15px;
+
+}
+
+
+
+.hero-highlight {
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    border-top:5px solid var(--orange);
+
+}
+
+
+
+.hero-highlight ul {
+
+    list-style:none;
+
+}
+
+
+
+.hero-highlight li {
+
+    margin-bottom:12px;
+
+}
+
+
+
+/*=========================
+  FRAMEWORK
+=========================*/
+
+
+.framework {
+
+    background:var(--warm-bg);
+
+    padding:90px 0;
+
+}
+
+
+
+.section-heading {
+
+    text-align:center;
+
+    max-width:750px;
+
+    margin:auto;
+
+}
+
+
+
+.framework-circles {
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:25px;
+
+    margin-top:60px;
+
+}
+
+
+
+.framework-step {
+
+    text-align:center;
+
+}
+
+
+
+.circle {
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:var(--navy);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:2rem;
+
+    font-weight:bold;
+
+    margin:0 auto 20px;
+
+}
+
+
+
+.framework-step p {
+
+    color:var(--gray);
+
+    font-size:.95rem;
+
+}
+
+
+
+/*=========================
+  CARDS
+=========================*/
+
+
+.challenges {
+
+    padding:90px 0;
+
+}
+
+
+
+.card-grid,
+.service-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+
+
+.card,
+.service-card {
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    border:1px solid #f0f0f0;
+
+}
+
+
+
+.card p,
+.service-card p {
+
+    color:var(--gray);
+
+}
+
+.featured-service {
+
+    border-top:5px solid var(--orange);
+
+    transform:translateY(-10px);
+
+}
+
+.contact-form {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+.contact-form label {
+
+    font-weight:700;
+
+    color:var(--navy);
+
+}
+
+
+.contact-form input,
+.contact-form textarea {
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    font-family:inherit;
+
+    font-size:1rem;
+
+}
+
+
+.contact-form textarea {
+
+    resize:vertical;
+
+}
+
+
+.contact-form button {
+
+    border:none;
+
+    cursor:pointer;
+
+    width:max-content;
+
+}
+
+/*=========================
+ SERVICES
+=========================*/
+
+
+.services-preview {
+
+    background:var(--light-bg);
+
+    padding:90px 0;
+
+}
+
+
+
+/*=========================
+ ABOUT
+=========================*/
+
+
+.about-preview {
+
+    padding:90px 0;
+
+    max-width:850px;
+
+}
+
+
+
+.about-preview p {
+
+    font-size:1.1rem;
+
+    color:var(--gray);
+
+}
+
+
+
+/*=========================
+ CTA
+=========================*/
+
+
+.cta {
+
+    background:var(--navy);
+
+    color:white;
+
+    text-align:center;
+
+    padding:80px 0;
+
+}
+
+
+
+.cta h2 {
+
+    color:white;
+
+}
+
+
+
+.cta p {
+
+    color:white;
+
+}
+
+
+
+/*=========================
+ FOOTER
+=========================*/
+
+
+/*=========================
+  BUSINESS FAMILY FOOTER
+=========================*/
+
+
+.site-footer {
+
+    background:var(--navy);
+
+    color:white;
+
+    padding:70px 0 30px;
+
+}
+
+
+
+.footer-grid {
+
+    display:grid;
+
+    grid-template-columns:1.2fr 2fr;
+
+    gap:50px;
+
+    align-items:start;
+
+}
+
+
+
+.footer-brand h3 {
+
+    color:white;
+
+    font-size:1.5rem;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.footer-brand p {
+
+    color:white;
+
+    opacity:.9;
+
+}
+
+
+
+.footer-businesses {
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+
+.business-link {
+
+    display:block;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:var(--radius);
+
+    transition:.3s ease;
+
+}
+
+
+
+.business-link:hover {
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.business-link h4 {
+
+    color:var(--navy);
+
+    margin-bottom:8px;
+
+}
+
+
+
+.business-link p {
+
+    color:var(--gray);
+
+    font-size:.9rem;
+
+}
+
+
+
+.footer-bottom {
+
+    border-top:1px solid rgba(255,255,255,.3);
+
+    margin-top:50px;
+
+    padding-top:25px;
+
+    text-align:center;
+
+}
+
+
+
+.footer-bottom p {
+
+    margin-bottom:8px;
+
+}
+
+
+@media(max-width:900px){
+
+
+.footer-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.footer-businesses {
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+/*=========================
+ RESPONSIVE
+=========================*/
+
+
+@media(max-width:950px){
+
+
+    .nav-container {
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+
+    .main-nav {
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+
+    .hero-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .framework-circles {
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+
+    .card-grid,
+    .service-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    h1 {
+
+        font-size:2.4rem;
+
+    }
+
+
+    h2 {
+
+        font-size:2rem;
+
+    }
+
+
+    .framework-circles {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        display:block;
+
+        margin:15px 0;
+
+        text-align:center;
+
+    }
+
+
+
+}
+.featured-service {
+
+    transform:none;
+
+}
+/*=========================
+ EMAIL SIGNUP
+=========================*/
+
+
+.email-signup {
+
+    background:var(--warm-bg);
+
+    padding:90px 0;
+
+}
+
+
+
+.signup-box {
+
+    max-width:750px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:50px;
+
+    text-align:center;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    border-top:5px solid var(--orange);
+
+}
+
+
+
+.signup-form {
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:30px;
+
+    justify-content:center;
+
+}
+
+
+
+.signup-form input {
+
+    flex:1;
+
+    padding:15px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    font-family:inherit;
+
+}
+
+
+
+.privacy-note {
+
+    font-size:.85rem;
+
+    color:var(--gray);
+
+    margin-top:20px;
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.signup-form {
+
+    flex-direction:column;
+
+}
+
+
+.signup-box {
+
+    padding:35px 25px;
+
+}
+
+
+}
