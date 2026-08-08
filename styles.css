@@ -4,8 +4,6 @@ body {
   background: #FFF5EA;
   color: #333;
 }
-
-/* NAVIGATION */
 .main-nav {
   width: 100%;
   background: #FFD699;
@@ -23,13 +21,6 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap; /* ⭐ FIX: Prevents cutoff on small phones */
-}
-
-@media (max-width: 480px) {
-  .main-nav ul {
-    gap: 1rem; /* ⭐ Optional improvement for tiny screens */
-  }
 }
 
 .main-nav a {
@@ -40,18 +31,7 @@ body {
 }
 
 .main-nav a:hover {
-  color: #FF940E;
-}
-
-/* HERO */
-.index-page .main-nav a[href="index.html"],
-.classes-page .main-nav a[href="classes.html"],
-.blog-page .main-nav a[href="blog.html"],
-.about-page .main-nav a[href="about.html"],
-.contact-page .main-nav a[href="contact.html"],
-.portal-page .main-nav a[href="portal.html"] {
-  color: #b50202;
-  border-bottom: 3px solid #b50202;
+  color: #000;
 }
 
 /* HERO — universal layout + text */
@@ -109,15 +89,15 @@ body {
 }
 
 /* HERO TYPOGRAPHY */
-
 .hero h1 {
   font-size: 3rem;
   font-family: 'Alex Brush', cursive;
 }
 
+
 .slide-text {
   font-size: 2rem;
-  color: #004AAD;
+  color: #B3C9F5;
   font-weight: bold;
   animation: slideIn 2s ease-out forwards;
 }
@@ -139,10 +119,9 @@ body {
   background-color: #FF940E;
   transform: scale(1.05);
 }
-
 .about-explore-btn {
   display: inline-block;
-  background-color: #b50202;
+  background-color:  #b50202; /* choose any color you like */
   color: white;
   padding: 0.8rem 1.6rem;
   border-radius: 30px;
@@ -156,7 +135,7 @@ body {
 }
 
 .about-explore-btn:hover {
-  background-color: #FF940E;
+  background-color: #FF940E; /* warm orange hover */
   transform: scale(1.05);
 }
 
@@ -178,6 +157,7 @@ body {
   50% { transform: translateY(-8px); }
 }
 
+
 /* CLASS CARDS */
 .classes-section {
   padding: 3rem 2rem;
@@ -187,16 +167,9 @@ body {
 
 .class-grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
-}
-
-/* ⭐ FIX: Force stacking on mobile for ALL grids */
-@media (max-width: 768px) {
-  .class-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 .class-card {
@@ -311,27 +284,167 @@ body {
   border-radius: 5px;
 }
 
-/* FOOTER */
-footer {
-  background: #004AAA;
-  color: white;
+/* -------------------------------------------------- FOOTER — BEAN'S DREAMS FAMILY -------------------------------------------------- */
+.site-footer {
+  background: linear-gradient(
+    135deg,
+    #F3E8FF,   /* light lavender */
+    #E3D4FF,   /* soft pastel purple */
+    #D4C2FF    /* deeper lavender */
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin-top: 80px;
+  padding: 45px 30px 20px;
+}
+
+.footer-heading {
   text-align: center;
-  padding: 1rem;
+  margin-bottom: 25px;
 }
 
-h2 {
-  position: relative;
-  padding-bottom: 2rem;
+.footer-heading p {
+  color: #6A2CA0; /* deep purple text */
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
 }
 
-/* Orange line under headings */
+/* -------------------------------------------------- THREE BUSINESS CARDS -------------------------------------------------- */
+.footer-businesses {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.footer-business {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 22px;
+
+  /* brighter glass card */
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+
+  /* glowing gold border */
+  border: 2px solid rgba(255, 200, 120, 0.65);
+  border-radius: 14px;
+
+  text-decoration: none;
+  color: #4A1F6F; /* readable deep plum */
+
+  transition: transform 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+}
+
+/* Hover glow */
+.footer-business:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.45);
+
+  border-color: #FFCC66; /* bright gold */
+
+  box-shadow:
+    0 0 18px rgba(255, 200, 120, 0.55),
+    0 0 28px rgba(255, 148, 14, 0.35),
+    0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* -------------------------------------------------- ICON -------------------------------------------------- */
+.footer-icon {
+  font-size: 1.9rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* -------------------------------------------------- CARD TEXT -------------------------------------------------- */
+.footer-business h4 {
+  color: #B50202; /* your signature red */
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+.footer-business p {
+  color: #4A1F6F; /* deep plum */
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* -------------------------------------------------- CURRENT SITE -------------------------------------------------- */
+.footer-business.current-site {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: #FEB803;
+
+  box-shadow:
+    0 0 20px rgba(254, 184, 3, 0.55),
+    0 0 32px rgba(255, 148, 14, 0.35);
+}
+
+.footer-business.current-site h4 {
+  color: #FEB803;
+  text-shadow: 0 0 6px rgba(254, 184, 3, 0.35);
+}
+
+.footer-business.current-site p {
+  color: #4A1F6F;
+}
+
+.footer-business.current-site:hover {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: #FF940E;
+
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 0 26px rgba(254, 184, 3, 0.7),
+    0 0 40px rgba(255, 148, 14, 0.45);
+}
+
+/* -------------------------------------------------- FOOTER BOTTOM -------------------------------------------------- */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 235, 210, 0.3);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #4A1F6F;
+  font-size: 0.8rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* -------------------------------------------------- FOOTER RESPONSIVE -------------------------------------------------- */
+@media (max-width: 800px) {
+  .footer-businesses {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+}
+
+
+/* Simple orange line that fades at both ends */
 h2::after {
   content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: 260px;
+  width: 260px;          /* make this larger/smaller as you like */
   height: 4px;
   border-radius: 999px;
   background: linear-gradient(
@@ -342,7 +455,6 @@ h2::after {
   );
 }
 
-/* Lead Form */
 .lead-form-section {
   max-width: 700px;
   margin: 2rem auto;
@@ -383,17 +495,67 @@ h2::after {
 html {
   scroll-behavior: smooth;
 }
+/* Base card styling */
+.class-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+section h2,
+.section-title {
+  text-align: center;
+}
 
-/* Pastel card variants */
-.card-peach { background: #FFE8C6; }
-.card-mint { background: #DFF7E6; }
-.card-lavender { background: #EDE3FF; }
-.card-sunshine { background: #FFF3C4; }
-.card-rose { background: #FFE1E8; }
-.card-sky { background: #DFF1FF; }
-.card-sage { background: #E8F5E4; }
-.card-lilac { background: #F3E8FF; }
+.class-card:hover {
+  transform: translateY(-5px);
+}
 
+.class-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Pastel color variants */
+.card-peach {
+  background: #FFE8C6;
+}
+
+.card-mint {
+  background: #DFF7E6;
+}
+
+.card-lavender {
+  background: #EDE3FF;
+}
+
+.card-sunshine {
+  background: #FFF3C4;
+}
+
+.card-rose {
+  background: #FFE1E8;
+}
+
+.card-sky {
+  background: #DFF1FF;
+}
+
+.card-sage {
+  background: #E8F5E4;
+}
+
+.card-lilac {
+  background: #F3E8FF;
+}
+
+/* Grid layout */
+.class-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 2rem;
+}
 .hidden {
   display: none;
 }
