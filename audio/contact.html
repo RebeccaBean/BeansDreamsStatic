@@ -10,35 +10,66 @@
 
 <body>
 
-<!-- CONTACT HERO -->
-<section class="sub-hero contact-hero">
-    <h1>Contact</h1>
-    <p>Ready to start your edit? Get in touch and I’ll respond as soon as possible.</p>
+<header>
+    <div class="logo">Nick's Mixes</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn">Book Now</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero hero--contact">
+    <div class="hero-content" data-animate>
+        <h1>Contact</h1>
+        <p>Ready to start your edit? Get in touch and I’ll respond as soon as possible.</p>
+    </div>
 </section>
 
-<!-- CONTACT CONTENT -->
-<section class="page-section contact-section">
-    <div class="container">
+<!-- CONTACT FORM + DETAILS -->
+<section class="grid">
+    <h2>Send a Message</h2>
 
-        <h2 class="section-title neon-blue">Send a Message</h2>
-
-        <!-- FIXED: added id="audioContactForm" -->
+    <div class="card neon" data-animate style="grid-column: 1 / -1;">
         <form class="contact-form" id="audioContactForm">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-            <button type="submit" class="btn-primary neon-button">Send Message</button>
-        </form>
 
-        <div class="contact-details">
-            <h2 class="section-title neon-blue">Other Ways to Reach Me</h2>
-            <p>Email: <strong>your-email@example.com</strong></p>
-            <p>Location: <strong>San Diego, CA</strong></p>
-        </div>
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <select name="service" required>
+                <option value="">What service are you interested in?</option>
+                <option value="Custom Dance Edit">Custom Dance Edit</option>
+                <option value="Audio Engineering">Audio Engineering</option>
+                <option value="Remix-Style Transformation">Remix-Style Transformation</option>
+                <option value="Medley Creation">Medley Creation</option>
+                <option value="Not Sure Yet">Not Sure Yet</option>
+            </select>
+
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+      <div id="formSuccess" class="form-success" style="display:none;">
+    <p>Message sent successfully! I’ll get back to you soon.</p>
+</div>
 
     </div>
 </section>
 
+    <h2>Other Ways to Reach Me</h2>
+
+    <div class="card neon" data-animate>
+        <p>Email: <strong>info@beansdreams.org</strong></p>
+        
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="site-footer">
     <div class="footer-heading">
         <p>Explore the Bean's Dreams Family</p>
@@ -46,7 +77,6 @@
 
     <div class="footer-businesses">
 
-        <!-- CONSULTING -->
         <a href="https://beansdreams.org" class="footer-business">
             <span class="footer-icon">💼</span>
             <div>
@@ -55,7 +85,6 @@
             </div>
         </a>
 
-        <!-- DANCE -->
         <a href="https://beansdreams.org/dance" class="footer-business">
             <span class="footer-icon">💃</span>
             <div>
@@ -64,12 +93,12 @@
             </div>
         </a>
 
-        <!-- AUDIO -->
         <a href="https://beansdreams.org/audio" class="footer-business current-site">
             <span class="footer-icon">🎧</span>
             <div>
                 <h4>Nick's Mixes</h4>
-                <p>Custom dance music mixing for studios, martial arts, and cheer programs.</p>
+                <p>Custom dance music mixing for studios,
+                    martial arts, and cheer programs.</p>
             </div>
         </a>
 
@@ -91,23 +120,40 @@ document.getElementById("audioContactForm").addEventListener("submit", function(
     const data = {
         name: form.name.value,
         email: form.email.value,
+        service: form.service.value,
         message: form.message.value
     };
 
     fetch("https://script.google.com/macros/s/AKfycbwZSJl6Uwq2B5wc0E7vfkDkCNiTTL1G3Ei79eaKHm9dvxDrOJ6mI1R4aRv0aZl9qm_Kjw/exec", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
     })
     .then(() => {
-        alert("Message sent successfully! I’ll get back to you soon.");
+        document.getElementById("formSuccess").style.display = "block";
         form.reset();
     })
     .catch(() => {
         alert("Something went wrong. Please try again.");
     });
+});
+</script>
+
+
+<!-- SCROLL ANIMATION -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll("[data-animate]");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
 });
 </script>
 

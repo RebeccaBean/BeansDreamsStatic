@@ -7,16 +7,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #0d0d0d;
+    background: #0d0d0d;
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 /* --------------------------------------------------
@@ -69,10 +69,9 @@ nav .btn {
 }
 
 /* --------------------------------------------------
-   HERO SECTIONS
+   HERO SYSTEM (Unified)
 -------------------------------------------------- */
-.hero,
-.sub-hero {
+.hero {
     padding: 180px 20px 100px;
     text-align: center;
     background-size: cover;
@@ -80,50 +79,47 @@ nav .btn {
     background-repeat: no-repeat;
 }
 
-/* HOME PAGE HERO */
-.hero {
-    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
-        url('https://images.unsplash.com/photo-1518972559570-7cc1309f3229?auto=format&fit=crop&w=1400&q=80');
-}
-
-/* PRICING PAGE HERO */
-.sub-hero.pricing-hero {
-    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
-        url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1400&q=80');
-}
-
-/* ABOUT PAGE HERO — NOW MATCHES OTHER PAGES */
-.sub-hero.about-hero {
-    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
-        url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1920&q=80');
-}
-
-/* SERVICES PAGE HERO */
-.sub-hero.services-hero {
-    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
-        url('https://images.unsplash.com/photo-1500702790369-fe461685b3c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-}
-
-/* CONTACT PAGE HERO */
-.sub-hero.contact-hero {
-    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
-        url('https://images.unsplash.com/photo-1567598110120-04e7c2390863?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-}
-
-/* HERO TEXT */
-.hero h1,
-.sub-hero h1 {
+.hero h1 {
     font-size: 2.8rem;
     margin-bottom: 15px;
 }
 
-.hero p,
-.sub-hero p {
+.hero p {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto;
 }
 
+/* Hero Variants — SAME IMAGES YOU USE NOW */
+.hero--home {
+    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
+        url('https://images.unsplash.com/photo-1518972559570-7cc1309f3229?auto=format&fit=crop&w=1400&q=80');
+}
+
+.hero--pricing {
+    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
+        url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1400&q=80');
+}
+
+.hero--about {
+    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
+        url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1920&q=80');
+}
+
+.hero--services {
+    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
+        url('https://images.unsplash.com/photo-1500702790369-fe461685b3c8?q=80&w=1170&auto=format&fit=crop');
+}
+
+.hero--contact {
+    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
+        url('https://images.unsplash.com/photo-1567598110120-04e7c2390863?q=80&w=1170&auto=format&fit=crop');
+}
+
+.hero--portfolio {
+    background-image: linear-gradient(to bottom right, #000000aa, #000000aa),
+        url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1400&q=80');
+}
 
 /* --------------------------------------------------
    BUTTONS
@@ -145,35 +141,9 @@ nav .btn {
 }
 
 /* --------------------------------------------------
-   CARDS (Services + Pricing)
+   GRID SYSTEM (Unified)
 -------------------------------------------------- */
-.service-block,
-.price-card {
-    background: #1a1a1a;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #2a2a2a;
-    margin: 20px auto;
-    max-width: 350px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover animation */
-.service-block:hover,
-.price-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 10px 25px rgba(0, 198, 255, 0.25);
-}
-
-.price-card .price {
-    font-size: 2rem;
-    color: #b300ff;
-    margin-bottom: 20px;
-}
-
-/* Responsive pricing grid */
-.pricing-page {
+.grid {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
@@ -184,79 +154,14 @@ nav .btn {
     text-align: center;
 }
 
-/* Cards inside the grid */
-.price-card {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-
-/* --------------------------------------------------
-   CONTACT FORM
--------------------------------------------------- */
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #2a2a2a;
-    background: #1a1a1a;
-    color: white;
-}
-
-/* --------------------------------------------------
-   AOS‑STYLE SCROLL ANIMATIONS
--------------------------------------------------- */
-[data-animate] {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-}
-
-[data-animate].visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* --------------------------------------------------
-   RESPONSIVE
--------------------------------------------------- */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero h1,
-    .sub-hero h1 {
-        font-size: 1.9rem;
-    }
-
-}
-/* Neon border hover effect */
-.neon-card {
-    border: 1px solid #2a2a2a;
-    transition: 0.3s ease;
-}
-
-.neon-card:hover {
-    border-color: #00c6ff;
-    box-shadow: 0 0 15px rgba(0, 198, 255, 0.6),
-                0 0 30px rgba(179, 0, 255, 0.4);
-    transform: translateY(-8px) scale(1.03);
-}
-.pricing-page h2 {
+.grid h2 {
     grid-column: 1 / -1;
-    text-align: center;
-    margin-bottom: 20px;
     font-size: 2rem;
+    margin-bottom: 20px;
     position: relative;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.pricing-page h2::after {
+.grid h2::after {
     content: "";
     display: block;
     width: 80px;
@@ -266,24 +171,72 @@ nav .btn {
     border-radius: 3px;
     box-shadow: 0 0 10px rgba(0, 198, 255, 0.7);
 }
-.pricing-page .service-note {
-    grid-column: 1 / -1;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 20px;
-    font-size: 1rem;
-    opacity: 0.9;
+
+/* --------------------------------------------------
+   CARD SYSTEM (Unified)
+-------------------------------------------------- */
+.card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #2a2a2a;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-h3 {
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 198, 255, 0.25);
+}
+
+/* Neon Glow Variant */
+.card.neon {
+    border: 1px solid #2a2a2a;
+}
+
+.card.neon:hover {
+    border-color: #00c6ff;
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.6),
+                0 0 30px rgba(179, 0, 255, 0.4);
+}
+
+/* Card Headings */
+.card h3 {
     color: #00c6ff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
-/* FAQ ACCORDION */
+
+/* --------------------------------------------------
+   CONTACT FORM
+-------------------------------------------------- */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+    background: #1a1a1a;
+    color: white;
+}
+
+/* --------------------------------------------------
+   FAQ ACCORDION
+-------------------------------------------------- */
 .faq-item {
-    padding: 0;
     overflow: hidden;
 }
 
-/* Question Button */
 .faq-question {
     width: 100%;
     background: transparent;
@@ -302,13 +255,11 @@ h3 {
     color: #00c6ff;
 }
 
-/* Icon */
 .faq-icon {
     font-size: 1.5rem;
     transition: transform 0.3s ease;
 }
 
-/* Answer Panel */
 .faq-answer {
     max-height: 0;
     overflow: hidden;
@@ -321,7 +272,6 @@ h3 {
     opacity: 0.9;
 }
 
-/* When Open */
 .faq-item.open .faq-answer {
     max-height: 300px;
     padding: 0 20px 20px;
@@ -331,180 +281,226 @@ h3 {
     transform: rotate(45deg);
 }
 
-/* Glow Border Enhancement */
-.faq-item.neon-card {
-    border: 1px solid #2a2a2a;
-    transition: 0.3s ease;
-}
-
-.faq-item.neon-card:hover {
-    border-color: #00c6ff;
-    box-shadow: 0 0 15px rgba(0, 198, 255, 0.6),
-                0 0 30px rgba(179, 0, 255, 0.4);
-}
 /* --------------------------------------------------
-   FOOTER — NICK'S MIXES
+   FOOTER — BLUE GRADIENT (Preserved)
 -------------------------------------------------- */
-
 .site-footer {
-  background: linear-gradient(
-    135deg,
-    #0A3FB3,
-    #004AAD,
-    #002F7A
-  ); /* navy gradient */
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  margin-top: 80px;
-  padding: 45px 30px 20px;
+    background: linear-gradient(135deg, #0A3FB3, #004AAD, #002F7A);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 80px;
+    padding: 45px 30px 20px;
 }
 
 .footer-heading {
-  text-align: center;
-  margin-bottom: 25px;
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 .footer-heading p {
-  color: #FFF5EA;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
+    color: #FFF5EA;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
 }
 
-/* --------------------------------------------------
-   BUSINESS CARD GRID
--------------------------------------------------- */
-
+/* Footer Business Grid */
 .footer-businesses {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-/* --------------------------------------------------
-   BUSINESS CARD — BLACK + NEON GLOW
--------------------------------------------------- */
-
+/* Footer Business Card */
 .footer-business {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  padding: 22px;
-
-  background: #0b0b0b; /* deeper black for contrast */
-  border: 2px solid #3d3d3d; /* visible neutral border */
-  border-radius: 12px;
-
-  text-decoration: none;
-  color: #ffffff;
-
-  transition: transform 0.3s ease,
-              border-color 0.3s ease,
-              box-shadow 0.3s ease,
-              background 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 22px;
+    background: #0b0b0b;
+    border: 2px solid #3d3d3d;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
 }
-
-/* --------------------------------------------------
-   HOVER — NEON BLUE + PURPLE GLOW
--------------------------------------------------- */
 
 .footer-business:hover {
-  transform: translateY(-6px);
-
-  background: #111; /* slight lift in brightness */
-  border-color: #00c6ff; /* neon blue border */
-
-  box-shadow:
-    0 0 14px rgba(0, 198, 255, 0.75),   /* neon blue glow */
-    0 0 26px rgba(179, 0, 255, 0.45),   /* neon purple glow */
-    0 6px 18px rgba(0, 0, 0, 0.4);      /* depth shadow */
+    transform: translateY(-6px);
+    background: #111;
+    border-color: #00c6ff;
+    box-shadow:
+        0 0 14px rgba(0, 198, 255, 0.75),
+        0 0 26px rgba(179, 0, 255, 0.45),
+        0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
-/* --------------------------------------------------
-   ICON + TEXT
--------------------------------------------------- */
-
 .footer-icon {
-  font-size: 1.9rem;
-  line-height: 1;
+    font-size: 1.9rem;
 }
 
 .footer-business h4 {
-  color: #FFF5EA;
-  margin: 0 0 6px;
-  font-size: 1.05rem;
-  font-weight: bold;
+    color: #FFF5EA;
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+    font-weight: bold;
 }
 
 .footer-business p {
-  color: #bfbfbf; /* brighter gray for readability */
-  font-size: 0.9rem;
-  line-height: 1.55;
-  margin: 0;
+    color: #bfbfbf;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 0;
 }
 
-/* --------------------------------------------------
-   CURRENT SITE — STRONGER NEON
--------------------------------------------------- */
-
+/* Current Site Highlight */
 .footer-business.current-site {
-  border-color: #00c6ff;
-
-  box-shadow:
-    0 0 18px rgba(0, 198, 255, 0.85),
-    0 0 32px rgba(179, 0, 255, 0.55);
+    border-color: #00c6ff;
+    box-shadow:
+        0 0 18px rgba(0, 198, 255, 0.85),
+        0 0 32px rgba(179, 0, 255, 0.55);
 }
 
 .footer-business.current-site h4 {
-  color: #00c6ff;
-  text-shadow: 0 0 7px rgba(0, 198, 255, 0.6);
+    color: #00c6ff;
+    text-shadow: 0 0 7px rgba(0, 198, 255, 0.6);
 }
 
 .footer-business.current-site p {
-  color: #d6d6d6;
+    color: #d6d6d6;
 }
 
 .footer-business.current-site:hover {
-  transform: translateY(-7px);
-
-  box-shadow:
-    0 0 22px rgba(0, 198, 255, 1),
-    0 0 40px rgba(179, 0, 255, 0.65);
+    transform: translateY(-7px);
+    box-shadow:
+        0 0 22px rgba(0, 198, 255, 1),
+        0 0 40px rgba(179, 0, 255, 0.65);
 }
 
-/* --------------------------------------------------
-   FOOTER BOTTOM
--------------------------------------------------- */
-
+/* Footer Bottom */
 .footer-bottom {
-  max-width: 1200px;
-  margin: 40px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid #222;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  color: #bfbfbf;
-  font-size: 0.8rem;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #bfbfbf;
+    font-size: 0.8rem;
 }
 
 .footer-bottom p {
-  margin: 0;
+    margin: 0;
+}
+
+/* --------------------------------------------------
+   ANIMATIONS
+-------------------------------------------------- */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+[data-animate].visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* --------------------------------------------------
    RESPONSIVE
 -------------------------------------------------- */
-
 @media (max-width: 800px) {
-  .footer-businesses {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-  }
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-  .footer-bottom {
-    flex-direction: column;
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .footer-businesses {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+}
+
+/* Neon Form Fields */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,200,255,0.6);
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+/* Neon Glow on Focus */
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: #00c6ff;
+    box-shadow: 0 0 10px #00c6ff;
+}
+
+/* Neon Submit Button */
+.contact-form button {
+    background: linear-gradient(90deg, #00c6ff, #0077ff);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    box-shadow: 0 0 12px #00c6ff;
+}
+
+.form-success {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #00c6ff;
+    background: rgba(0, 200, 255, 0.1);
+    color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #00c6ff;
     text-align: center;
-    gap: 5px;
-  }
+    font-size: 1.1rem;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Old Pricing Page Purple */
+.card .price {
+    font-size: 2rem;
+    color: #b300ff;   /* your original purple */
+    margin-bottom: 20px;
+    text-align: center; /* matches old layout */
 }
