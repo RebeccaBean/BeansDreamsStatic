@@ -288,11 +288,11 @@ body {
 .site-footer {
   background: linear-gradient(
     135deg,
-    #F3E8FF,   /* light lavender */
-    #E3D4FF,   /* soft pastel purple */
-    #D4C2FF    /* deeper lavender */
-  );
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
+    #0A3FB3,
+    #004AAD,
+    #002F7A
+  ); /* soft navy gradient */
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   margin-top: 80px;
   padding: 45px 30px 20px;
 }
@@ -303,7 +303,7 @@ body {
 }
 
 .footer-heading p {
-  color: #6A2CA0; /* deep purple text */
+  color: #FFF5EA;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
 }
@@ -324,15 +324,15 @@ body {
   padding: 22px;
 
   /* brighter glass card */
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
 
-  /* glowing gold border */
-  border: 2px solid rgba(255, 200, 120, 0.65);
+  /* glowing border */
+  border: 2px solid rgba(255, 200, 120, 0.55);
   border-radius: 14px;
 
   text-decoration: none;
-  color: #4A1F6F; /* readable deep plum */
+  color: #FFF5EA;
 
   transition: transform 0.3s ease,
               border-color 0.3s ease,
@@ -343,9 +343,9 @@ body {
 /* Hover glow */
 .footer-business:hover {
   transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.32);
 
-  border-color: #FFCC66; /* bright gold */
+  border-color: #FFD140; /* bright gold */
 
   box-shadow:
     0 0 18px rgba(255, 200, 120, 0.55),
@@ -362,14 +362,14 @@ body {
 
 /* -------------------------------------------------- CARD TEXT -------------------------------------------------- */
 .footer-business h4 {
-  color: #B50202; /* your signature red */
+  color: #FFD699;
   margin: 0 0 6px;
   font-size: 1.05rem;
   font-weight: bold;
 }
 
 .footer-business p {
-  color: #4A1F6F; /* deep plum */
+  color: #FFF5EA;
   font-size: 0.9rem;
   line-height: 1.55;
   margin: 0;
@@ -377,7 +377,7 @@ body {
 
 /* -------------------------------------------------- CURRENT SITE -------------------------------------------------- */
 .footer-business.current-site {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.35);
   border-color: #FEB803;
 
   box-shadow:
@@ -391,11 +391,11 @@ body {
 }
 
 .footer-business.current-site p {
-  color: #4A1F6F;
+  color: #FFF5EA;
 }
 
 .footer-business.current-site:hover {
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.42);
   border-color: #FF940E;
 
   transform: translateY(-7px);
@@ -410,11 +410,11 @@ body {
   max-width: 1200px;
   margin: 40px auto 0;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 235, 210, 0.3);
+  border-top: 1px solid rgba(255, 235, 210, 0.2);
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  color: #4A1F6F;
+  color: #FFF5EA;
   font-size: 0.8rem;
 }
 
@@ -435,6 +435,7 @@ body {
     gap: 5px;
   }
 }
+
 
 
 /* Simple orange line that fades at both ends */

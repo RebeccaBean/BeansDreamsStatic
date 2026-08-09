@@ -347,98 +347,129 @@ h3 {
 -------------------------------------------------- */
 
 .site-footer {
-    background: #050505;
-    border-top: 1px solid #222;
-    margin-top: 80px;
-    padding: 45px 30px 20px;
+  background: linear-gradient(
+    135deg,
+    #0A3FB3,
+    #004AAD,
+    #002F7A
+  ); /* navy gradient */
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 80px;
+  padding: 45px 30px 20px;
 }
 
 .footer-heading {
-    text-align: center;
-    margin-bottom: 25px;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .footer-heading p {
-    color: #888;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-}
-
-.footer-businesses {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.footer-business {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 22px;
-    background: #111;
-    border: 1px solid #292929;
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s ease;
-}
-
-/* Normal card hover */
-.footer-business:hover {
-    border-color: #00c6ff;
-    transform: translateY(-4px);
-    box-shadow:
-        0 0 10px rgba(0, 198, 255, 0.35),
-        0 0 20px rgba(179, 0, 255, 0.2);
-}
-
-.footer-icon {
-    font-size: 1.8rem;
-    line-height: 1;
-}
-
-.footer-business h4 {
-    color: #aaa;
-    margin: 0 0 6px;
-    font-size: 1rem;
-}
-
-.footer-business p {
-    color: #777;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    margin: 0;
+  color: #FFF5EA;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 /* --------------------------------------------------
-   CURRENT SITE — NICK'S MIXES
+   BUSINESS CARD GRID
+-------------------------------------------------- */
+
+.footer-businesses {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* --------------------------------------------------
+   BUSINESS CARD — BLACK + NEON GLOW
+-------------------------------------------------- */
+
+.footer-business {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 22px;
+
+  background: #0b0b0b; /* deeper black for contrast */
+  border: 2px solid #3d3d3d; /* visible neutral border */
+  border-radius: 12px;
+
+  text-decoration: none;
+  color: #ffffff;
+
+  transition: transform 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+}
+
+/* --------------------------------------------------
+   HOVER — NEON BLUE + PURPLE GLOW
+-------------------------------------------------- */
+
+.footer-business:hover {
+  transform: translateY(-6px);
+
+  background: #111; /* slight lift in brightness */
+  border-color: #00c6ff; /* neon blue border */
+
+  box-shadow:
+    0 0 14px rgba(0, 198, 255, 0.75),   /* neon blue glow */
+    0 0 26px rgba(179, 0, 255, 0.45),   /* neon purple glow */
+    0 6px 18px rgba(0, 0, 0, 0.4);      /* depth shadow */
+}
+
+/* --------------------------------------------------
+   ICON + TEXT
+-------------------------------------------------- */
+
+.footer-icon {
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.footer-business h4 {
+  color: #FFF5EA;
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+.footer-business p {
+  color: #bfbfbf; /* brighter gray for readability */
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --------------------------------------------------
+   CURRENT SITE — STRONGER NEON
 -------------------------------------------------- */
 
 .footer-business.current-site {
-    border-color: #00c6ff;
-    box-shadow:
-        0 0 10px rgba(0, 198, 255, 0.55),
-        0 0 22px rgba(179, 0, 255, 0.3);
+  border-color: #00c6ff;
+
+  box-shadow:
+    0 0 18px rgba(0, 198, 255, 0.85),
+    0 0 32px rgba(179, 0, 255, 0.55);
 }
 
 .footer-business.current-site h4 {
-    color: #00c6ff;
-    text-shadow:
-        0 0 7px rgba(0, 198, 255, 0.5);
+  color: #00c6ff;
+  text-shadow: 0 0 7px rgba(0, 198, 255, 0.6);
 }
 
 .footer-business.current-site p {
-    color: #aaa;
+  color: #d6d6d6;
 }
 
 .footer-business.current-site:hover {
-    border-color: #00c6ff;
-    transform: translateY(-4px);
-    box-shadow:
-        0 0 15px rgba(0, 198, 255, 0.8),
-        0 0 30px rgba(179, 0, 255, 0.45);
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 0 22px rgba(0, 198, 255, 1),
+    0 0 40px rgba(179, 0, 255, 0.65);
 }
 
 /* --------------------------------------------------
@@ -446,35 +477,34 @@ h3 {
 -------------------------------------------------- */
 
 .footer-bottom {
-    max-width: 1200px;
-    margin: 40px auto 0;
-    padding-top: 20px;
-    border-top: 1px solid #222;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    color: #777;
-    font-size: 0.8rem;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #bfbfbf;
+  font-size: 0.8rem;
 }
 
 .footer-bottom p {
-    margin: 0;
+  margin: 0;
 }
 
 /* --------------------------------------------------
-   FOOTER RESPONSIVE
+   RESPONSIVE
 -------------------------------------------------- */
 
 @media (max-width: 800px) {
+  .footer-businesses {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
 
-    .footer-businesses {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
 }
