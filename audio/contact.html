@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Nick's Mixes</title>
+
+    <link rel="stylesheet" href="audio.css">
+</head>
+
+<body>
+
 <!-- CONTACT HERO -->
 <section class="sub-hero contact-hero">
     <h1>Contact</h1>
@@ -10,7 +22,8 @@
 
         <h2 class="section-title neon-blue">Send a Message</h2>
 
-        <form class="contact-form">
+        <!-- FIXED: added id="audioContactForm" -->
+        <form class="contact-form" id="audioContactForm">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
@@ -38,10 +51,7 @@
             <span class="footer-icon">💼</span>
             <div>
                 <h4>Rebecca Bean Consulting</h4>
-                <p>
-                    Helping busy small businesses simplify, organize,
-                    and reclaim their time.
-                </p>
+                <p>Helping busy small businesses simplify, organize, and reclaim their time.</p>
             </div>
         </a>
 
@@ -50,9 +60,7 @@
             <span class="footer-icon">💃</span>
             <div>
                 <h4>Bean's Dreams Dance Academy</h4>
-                <p>
-                    Dance education, movement, and creative expression.
-                </p>
+                <p>Dance education, movement, and creative expression.</p>
             </div>
         </a>
 
@@ -61,10 +69,7 @@
             <span class="footer-icon">🎧</span>
             <div>
                 <h4>Nick's Mixes</h4>
-                <p>
-                    Custom dance music mixing for studios,
-                    martial arts, and cheer programs.
-                </p>
+                <p>Custom dance music mixing for studios, martial arts, and cheer programs.</p>
             </div>
         </a>
 
@@ -76,6 +81,7 @@
     </div>
 </footer>
 
+<!-- GOOGLE SHEETS FORM SCRIPT -->
 <script>
 document.getElementById("audioContactForm").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -96,7 +102,6 @@ document.getElementById("audioContactForm").addEventListener("submit", function(
         body: JSON.stringify(data)
     })
     .then(() => {
-        // Neon success popup
         alert("Message sent successfully! I’ll get back to you soon.");
         form.reset();
     })
@@ -105,3 +110,6 @@ document.getElementById("audioContactForm").addEventListener("submit", function(
     });
 });
 </script>
+
+</body>
+</html>
