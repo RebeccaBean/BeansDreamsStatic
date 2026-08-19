@@ -560,3 +560,20 @@ section h2,
 .hidden {
   display: none;
 }
+/* =========================================
+   STEP & SIZZLE - NEW GROUP CLASS
+   ========================================= */
+
+.signature-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  /* Special signature border */
+  border: 3px solid #004AAD;
+  box-shadow:
+    0 0 0 3px #FD8100,
+    0 10px 25px rgba(0, 74, 170, 0.18);
+
+  transform: translateY(-4px);
+}
