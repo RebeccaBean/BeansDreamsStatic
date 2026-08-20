@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Contact | Rebecca Bean Consulting</title>
@@ -13,10 +11,233 @@
 content="Contact Rebecca Bean Consulting to discover practical ways to simplify your business and reclaim your time.">
 
 <link rel="stylesheet" href="consulting.css">
-
 </head>
 
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+
+    <div class="logo">
+      <a href="index.html">
+        Rebecca Bean Consulting
+        <span>A Bean's Dreams Company</span>
+      </a>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="section-heading">
+
+      <p class="eyebrow">Let's Connect</p>
+
+      <h1>Find Where Your Business Can Save Time</h1>
+
+      <p>
+        Tell me about your business and the challenges you are
+        facing. Together we can identify opportunities to simplify
+        your daily work.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<section class="challenges">
+  <div class="container">
+
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>Step 1: Tell Me About Your Business</h3>
+        <p>
+          Complete the short form below so I can understand your
+          business, your goals, and where you may need support.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Step 2: Review Your Options</h3>
+        <p>
+          I will review your information and determine the best way
+          I can help.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Step 3: Schedule A Conversation</h3>
+        <p>
+          If it feels like a good fit, choose a time that works for
+          your discovery call.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="services-preview">
+  <div class="container">
+    <div class="card">
+
+      <h2>Business Inquiry Form</h2>
+
+      <p>
+        Tell me a little about your business and what you'd like
+        to improve. I'll review your information and follow up
+        with the next steps.
+      </p>
+
+      <form class="contact-form" id="businessInquiryForm">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="business">Business Name</label>
+        <input type="text" id="business" name="business" placeholder="Your business name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+        <label for="website">Business Website</label>
+        <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+
+        <label for="industry">What type of business do you have?</label>
+        <input type="text" id="industry" name="industry" placeholder="Dance studio, salon, service business, etc." required>
+
+        <label for="employees">How many people work in your business?</label>
+        <select id="employees" name="employees" required>
+          <option value="">Select one</option>
+          <option value="Just me">Just me</option>
+          <option value="2–5">2–5</option>
+          <option value="6–10">6–10</option>
+          <option value="11–25">11–25</option>
+          <option value="26+">26+</option>
+        </select>
+
+        <label for="challenge">What is your biggest challenge right now?</label>
+        <textarea id="challenge" name="challenge" rows="5"
+          placeholder="Tell me what is taking too much time, causing frustration, or making your business harder to manage."
+          required></textarea>
+
+        <label for="goal">What would you most like to improve?</label>
+        <textarea id="goal" name="goal" rows="4"
+          placeholder="For example: save time, improve customer communication, automate repetitive tasks, improve my website, etc."></textarea>
+
+        <label for="service">What are you interested in?</label>
+        <select id="service" name="service">
+          <option value="">Select an option</option>
+          <option value="Business Productivity Assessment">Business Productivity Assessment</option>
+          <option value="Business Productivity Makeover">Business Productivity Makeover</option>
+          <option value="Digital Presence & Customer Experience">Digital Presence & Customer Experience</option>
+          <option value="Ongoing Productivity Support">Ongoing Productivity Support</option>
+          <option value="Not sure yet">I'm not sure yet</option>
+        </select>
+
+        <button class="btn btn-primary" type="submit">Send Inquiry</button>
+
+        <p id="formStatus" style="margin-top:20px;" aria-live="polite"></p>
+
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<section class="framework">
+  <div class="container">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">Prefer To Schedule?</p>
+
+      <h2>Ready To Talk Now?</h2>
+
+      <p>
+        If you already know you would like to discuss your business,
+        you can schedule a discovery call directly.
+      </p>
+
+      <a href="https://calendar.app.google/QtFMYbCvi3AYYQoh7"
+         class="btn btn-primary"
+         target="_blank"
+         rel="noopener">
+        Schedule A Discovery Call
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+
+    <h2>Let's Make Your Business Easier To Manage</h2>
+
+    <p>Simple systems can create more time for what matters.</p>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <h3>Rebecca Bean Consulting</h3>
+        <p>Helping busy small businesses simplify, organize, and reclaim their time.</p>
+        <p>Part of the Bean's Dreams family of businesses.</p>
+      </div>
+
+      <div class="footer-businesses">
+
+        <a class="business-link" href="/dance">
+          <h4>💃 Bean's Dreams Dance Academy</h4>
+          <p>Dance education, movement, and creative expression.</p>
+        </a>
+
+        <a class="business-link" href="/audio">
+          <h4>🎧 Nick's Mixes</h4>
+          <p>
+            Custom dance music mixing for dance studios,
+            martial arts, and cheer programs.
+          </p>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Rebecca Bean Consulting</p>
+      <p>A Bean's Dreams Company</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ⭐ FIXED SCRIPT — runs AFTER the form exists -->
 <script>
+document.addEventListener("DOMContentLoaded", function () {
 
   const inquiryForm = document.getElementById("businessInquiryForm");
   const formStatus = document.getElementById("formStatus");
@@ -25,9 +246,7 @@ content="Contact Rebecca Bean Consulting to discover practical ways to simplify 
 
     event.preventDefault();
 
-    const submitButton =
-      inquiryForm.querySelector("button[type='submit']");
-
+    const submitButton = inquiryForm.querySelector("button[type='submit']");
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
 
@@ -37,14 +256,13 @@ content="Contact Rebecca Bean Consulting to discover practical ways to simplify 
 
     try {
 
-     const response = await fetch(
-  "https://script.google.com/macros/s/AKfycbwgnDUzhyCf60KKh7nSd8oR7oUdouJNG_lme_WOjdG4hJZ5tJcOV5N9VfJyVCgCLxE/exec",
-  {
-    method: "POST",
-    body: formData
-  }
-);
-
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwgnDUzhyCf60KKh7nSd8oR7oUdouJNG_lme_WOjdG4hJZ5tJcOV5N9VfJyVCgCLxE/exec",
+        {
+          method: "POST",
+          body: formData
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Submission failed");
@@ -72,601 +290,8 @@ content="Contact Rebecca Bean Consulting to discover practical ways to simplify 
 
   });
 
+});
 </script>
 
-<body>
-
-
-<header class="site-header">
-
-<div class="container nav-container">
-
-
-<div class="logo">
-
-<a href="index.html">
-
-Rebecca Bean Consulting
-
-<span>A Bean's Dreams Company</span>
-
-</a>
-
-</div>
-
-
-<nav class="main-nav">
-
-<a href="index.html">Home</a>
-
-<a href="services.html">Services</a>
-
-<a href="industries.html">Industries</a>
-
-<a href="resources.html">Resources</a>
-
-<a href="about.html">About</a>
-
-<a href="contact.html">Contact</a>
-
-</nav>
-
-
-</div>
-
-</header>
-
-
-
-
-
-<main>
-
-
-<section class="hero">
-
-<div class="container">
-
-
-<div class="section-heading">
-
-
-<p class="eyebrow">
-Let's Connect
-</p>
-
-
-<h1>
-Find Where Your Business Can Save Time
-</h1>
-
-
-<p>
-
-Tell me about your business and the challenges you are
-facing. Together we can identify opportunities to simplify
-your daily work.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-
-
-
-<section class="challenges">
-
-
-<div class="container">
-
-
-<div class="card-grid">
-
-
-<div class="card">
-
-<h3>
-Step 1: Tell Me About Your Business
-</h3>
-
-
-<p>
-Complete the short form below so I can understand your
-business, your goals, and where you may need support.
-</p>
-
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-Step 2: Review Your Options
-</h3>
-
-
-<p>
-I will review your information and determine the best way
-I can help.
-</p>
-
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-Step 3: Schedule A Conversation
-</h3>
-
-
-<p>
-If it feels like a good fit, choose a time that works for
-your discovery call.
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="services-preview">
-
-
-<div class="container">
-
-
-<div class="card">
-
-
-<!-- BUSINESS INQUIRY FORM -->
-
-<section class="services-preview">
-
-  <div class="container">
-
-    <div class="card">
-
-      <h2>
-        Business Inquiry Form
-      </h2>
-
-      <p>
-        Tell me a little about your business and what you'd like
-        to improve. I'll review your information and follow up
-        with the next steps.
-      </p>
-
-
-      <form
-        class="contact-form"
-        id="businessInquiryForm"
-      >
-
-
-        <!-- NAME -->
-
-        <label for="name">
-          Name
-        </label>
-
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your name"
-          required
-        >
-
-
-
-        <!-- BUSINESS NAME -->
-
-        <label for="business">
-          Business Name
-        </label>
-
-        <input
-          type="text"
-          id="business"
-          name="business"
-          placeholder="Your business name"
-          required
-        >
-
-
-
-        <!-- EMAIL -->
-
-        <label for="email">
-          Email
-        </label>
-
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Your email address"
-          required
-        >
-
-
-
-        <!-- WEBSITE -->
-
-        <label for="website">
-          Business Website
-        </label>
-
-        <input
-          type="url"
-          id="website"
-          name="website"
-          placeholder="https://yourwebsite.com"
-        >
-
-
-
-        <!-- INDUSTRY -->
-
-        <label for="industry">
-          What type of business do you have?
-        </label>
-
-        <input
-          type="text"
-          id="industry"
-          name="industry"
-          placeholder="Dance studio, salon, service business, etc."
-          required
-        >
-
-
-
-        <!-- NUMBER OF EMPLOYEES -->
-
-        <label for="employees">
-          How many people work in your business?
-        </label>
-
-        <select
-          id="employees"
-          name="employees"
-          required
-        >
-
-          <option value="">
-            Select one
-          </option>
-
-          <option value="Just me">
-            Just me
-          </option>
-
-          <option value="2–5">
-            2–5
-          </option>
-
-          <option value="6–10">
-            6–10
-          </option>
-
-          <option value="11–25">
-            11–25
-          </option>
-
-          <option value="26+">
-            26+
-          </option>
-
-        </select>
-
-
-
-        <!-- BIGGEST CHALLENGE -->
-
-        <label for="challenge">
-          What is your biggest challenge right now?
-        </label>
-
-        <textarea
-          id="challenge"
-          name="challenge"
-          rows="5"
-          placeholder="Tell me what is taking too much time, causing frustration, or making your business harder to manage."
-          required
-        ></textarea>
-
-
-
-        <!-- GOAL -->
-
-        <label for="goal">
-          What would you most like to improve?
-        </label>
-
-        <textarea
-          id="goal"
-          name="goal"
-          rows="4"
-          placeholder="For example: save time, improve customer communication, automate repetitive tasks, improve my website, etc."
-        ></textarea>
-
-
-
-        <!-- SERVICE INTEREST -->
-
-        <label for="service">
-          What are you interested in?
-        </label>
-
-        <select
-          id="service"
-          name="service"
-        >
-
-          <option value="">
-            Select an option
-          </option>
-
-          <option value="Business Productivity Assessment">
-            Business Productivity Assessment
-          </option>
-
-          <option value="Business Productivity Makeover">
-            Business Productivity Makeover
-          </option>
-
-          <option value="Digital Presence & Customer Experience">
-            Digital Presence & Customer Experience
-          </option>
-
-          <option value="Ongoing Productivity Support">
-            Ongoing Productivity Support
-          </option>
-
-          <option value="Not sure yet">
-            I'm not sure yet
-          </option>
-
-        </select>
-
-
-
-        <!-- SUBMIT BUTTON -->
-
-        <button
-          class="btn btn-primary"
-          type="submit"
-        >
-          Send Inquiry
-        </button>
-
-
-
-        <!-- FORM STATUS MESSAGE -->
-
-        <p
-          id="formStatus"
-          style="margin-top:20px;"
-          aria-live="polite"
-        ></p>
-
-
-      </form>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-
-<section class="framework">
-
-
-<div class="container">
-
-
-<div class="section-heading">
-
-
-<p class="eyebrow">
-Prefer To Schedule?
-</p>
-
-
-<h2>
-Ready To Talk Now?
-</h2>
-
-
-<p>
-
-If you already know you would like to discuss your business,
-you can schedule a discovery call directly.
-
-</p>
-
-
-<a href="https://calendar.app.google/QtFMYbCvi3AYYQoh7"
-   class="btn btn-primary"
-   target="_blank"
-   rel="noopener">
-  Schedule A Discovery Call
-</a>
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section class="cta">
-
-
-<div class="container">
-
-
-<h2>
-Let's Make Your Business Easier To Manage
-</h2>
-
-
-<p>
-Simple systems can create more time for what matters.
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-</main>
-
-
-
-
-
-
-
-<footer class="site-footer">
-
-<footer class="site-footer">
-
-
-<div class="container">
-
-
-<div class="footer-grid">
-
-
-<div class="footer-brand">
-
-<h3>
-Rebecca Bean Consulting
-</h3>
-
-
-<p>
-Helping busy small businesses simplify,
-organize, and reclaim their time.
-</p>
-
-
-<p>
-Part of the Bean's Dreams family of businesses.
-</p>
-
-</div>
-
-
-
-
-<div class="footer-businesses">
-
-
-<a class="business-link" href="/dance">
-
-<h4>
-💃 Bean's Dreams Dance Academy
-</h4>
-
-<p>
-Dance education, movement, and creative expression.
-</p>
-
-</a>
-
-
-
-
-<a class="business-link" href="/audio">
-
-<h4>
-🎧 Nick's Mixes
-</h4>
-
-<p>
-Custom dance music mixing for dance studios,
-martial arts, and cheer programs.
-</p>
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-
-<div class="footer-bottom">
-
-
-<p>
-© 2026 Rebecca Bean Consulting
-</p>
-
-
-<p>
-A Bean's Dreams Company
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</footer>
-
-
-
-
 </body>
-
 </html>
