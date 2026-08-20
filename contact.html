@@ -37,12 +37,14 @@ content="Contact Rebecca Bean Consulting to discover practical ways to simplify 
 
     try {
 
-      const response = await fetch(
-       "https://script.google.com/macros/s/AKfycbydKdxjZvkA15a8hhnVlJCCk1toZ_PowAbq-Y-TnftBOs4hGdmTJ_QQNfCCuF-7Gi_y/exec",{
-          method: "POST",
-          body: formData
-        }
-      );
+     const response = await fetch(
+  "https://script.google.com/macros/s/AKfycbz6jAR5p4xMv6hSglrlYDowb_uO5c_FSOoHOopbPOAW-Wh0CHwfxz2tYJzEm4rIf8E5/exec",
+  {
+    method: "POST",
+    body: formData
+  }
+);
+
 
       if (!response.ok) {
         throw new Error("Submission failed");
