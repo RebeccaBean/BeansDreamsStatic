@@ -46,53 +46,79 @@
 </header>
 
 <!-- CONTACT INFO -->
+
 <section class="classes-section">
   <h2 data-aos="fade-up">Get in Touch</h2>
 
-  <div class="class-grid" style="max-width:900px; margin:auto;">
+  <!-- Visible Contact Form -->
+  <div class="class-card card-peach" style="max-width:900px; margin:40px auto;" data-aos="fade-up">
 
-  <div class="class-card card-peach" data-aos="fade-right">
-  <div class="icon">📧</div>
-  <h3>Email</h3>
-  <p>
-    <a href="mailto:info@beansdreams.org">info@beansdreams.org</a>
-  </p>
-</div>
+    <h2 class="form-heading">Send Us a Message</h2>
+    <p>Questions about dance classes, guitar, singing, pricing, or registration? We’re here to help.</p>
 
-<div class="class-card card-sage" data-aos="fade-left">
-  <div class="icon">📱</div>
-  <h3>Social Media</h3>
-  <p>Instagram: @beansdreams</p>
-  <p>Facebook: Bean’s Dreams Studio</p>
-</div>
-</div>
+    <form id="universalContactForm"
+          action="https://formspree.io/f/mnpqaqkl"
+          method="POST"
+          class="dance-form">
 
-  <!-- BUTTONS -->
-  <button class="lead-toggle about-signup-btn" 
-        data-target="contactForm"
-        aria-controls="contactForm"
-        aria-expanded="false">
-  📝 Send Us a Message
-</button>
+      <!-- Identify which site the message came from -->
+      <input type="hidden" name="site" value="Dance">
 
-  <!-- CONTACT FORM MODAL -->
- <div id="contactForm" class="lead-form-section hidden">
-  <button class="close-btn" data-target="contactForm">✖</button>
+      <!-- Honeypot spam protection -->
+      <input type="text" name="_gotcha" style="display:none !important;">
 
-  <h2 class="form-heading">Send Us a Message</h2>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" required>
+      </div>
 
-  <iframe 
-    src="https://forms.gle/u97p5J2tPeSP7kbW8" 
-    width="100%" 
-    height="800" 
-    frameborder="0" 
-    marginheight="0" 
-    marginwidth="0"
-    style="border-radius: 12px;">
-  </iframe>
-</div>
+      <div class="form-group">
+        <label>Your Email</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>What are you reaching out about?</label>
+        <select name="category" required>
+          <option value="">Choose one</option>
+          <option value="Dance Classes">Dance Classes</option>
+          <option value="Guitar Lessons">Guitar Lessons</option>
+          <option value="Singing Lessons">Singing Lessons</option>
+          <option value="Pricing Questions">Pricing Questions</option>
+          <option value="Registration Help">Registration Help</option>
+          <option value="Schedule Availability">Schedule Availability</option>
+          <option value="General Question">General Question</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Your Message</label>
+        <textarea name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="about-signup-btn">Send Message</button>
+
+      <div id="formStatus" class="thankyou-bubble"></div>
+
+    </form>
+
+  </div>
+
+  <!-- Schedule a Call (Consulting-style) -->
+  <div class="class-card card-lavender" style="max-width:900px; margin:40px auto;" data-aos="fade-up">
+    <h3>Prefer to Talk?</h3>
+    <p>Schedule a call and we’ll help you get started.</p>
+
+    <a href="https://calendly.com/nickrebbean-epkm/new-meeting"
+       class="about-signup-btn"
+       target="_blank"
+       rel="noopener">
+      Schedule a Call
+    </a>
+  </div>
 
 </section>
+
 
 <!-- MESSAGE SECTION -->
 <section class="about-preview">
@@ -158,3 +184,43 @@
 
 </body>
 </html>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.getElementById("universalContactForm");
+  const formStatus = document.getElementById("formStatus");
+
+  if (!form) return;
+
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const submitButton = form.querySelector("button[type='submit']");
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (!response.ok) throw new Error();
+
+      form.reset();
+      formStatus.textContent = "Thank you! Your message has been sent.";
+
+    } catch (error) {
+      formStatus.textContent = "Something went wrong. Please try again.";
+    }
+
+    submitButton.disabled = false;
+    submitButton.textContent = "Send Message";
+  });
+
+});
+</script>

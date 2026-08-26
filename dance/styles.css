@@ -85,7 +85,7 @@ body {
 }
 
 .contact-hero {
-  background-image: url('https://plus.unsplash.com/premium_photo-1763922900688-3af88b6be352?q=80&w=1138&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url('https://images.unsplash.com/photo-1525296416200-59aaed194d0c?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=david-hofmann-klWtuMJE8Ho-unsplash.jpg');
 }
 
 /* HERO TYPOGRAPHY */
@@ -576,4 +576,92 @@ section h2,
     0 10px 25px rgba(0, 74, 170, 0.18);
 
   transform: translateY(-4px);
+}
+/* FORM LAYOUT */
+.dance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.dance-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.dance-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.dance-form input,
+.dance-form select,
+.dance-form textarea {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #cfcfcf;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* THANK YOU ANIMATION */
+.thankyou-bubble {
+  margin-top: 15px;
+  padding: 14px 18px;
+  background: #d9f7e8; /* soft mint pastel */
+  border-radius: 12px;
+  font-weight: 600;
+  color: #2a7f5f;
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.thankyou-bubble.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Prevent footer overlap */
+.classes-section {
+  margin-bottom: 80px;
+}
+
+.about-signup-btn {
+  display: inline-block;
+  background: linear-gradient(
+    135deg,
+    #FFD9B3,
+    #FFC48A,
+    #FFB066
+  );
+  color: #5A2A00;
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 148, 14, 0.25);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.about-signup-btn:hover {
+  background: linear-gradient(
+    135deg,
+    #FFB066,
+    #FF940E,
+    #FF7A00
+  );
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(255, 148, 14, 0.35);
 }
