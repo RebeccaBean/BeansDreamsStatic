@@ -21,8 +21,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-
 <!-- NAV -->
  <body class="about-page"></body>
 <nav class="main-nav">
@@ -258,9 +256,109 @@
 
 <!-- AOS Script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Initialize AOS animations
+  AOS.init({
+    duration: 700,
+    once: true
+  });
+
+
+  // ==========================================
+  // OUR JOURNEY ACCORDION
+  // ==========================================
+
+  const questions = document.querySelectorAll(".faq-question");
+
+  questions.forEach(function (question) {
+
+    question.addEventListener("click", function () {
+
+      const answerId = question.getAttribute("aria-controls");
+      const answer = document.getElementById(answerId);
+
+      if (!answer) return;
+
+      const isOpen = question.getAttribute("aria-expanded") === "true";
+
+      if (isOpen) {
+        // Close
+        question.setAttribute("aria-expanded", "false");
+        answer.hidden = true;
+      } else {
+        // Open
+        question.setAttribute("aria-expanded", "true");
+        answer.hidden = false;
+      }
+
+    });
+
+  });
+
+});
+</script>
+
+</body>
+</html><!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Initialize AOS
+  AOS.init({
+    duration: 700,
+    once: true
+  });
+
+  // ==========================================
+  // OUR JOURNEY
+  // ==========================================
+
+  const questions = document.querySelectorAll(".faq-question");
+
+  questions.forEach(function (question) {
+
+    question.addEventListener("click", function () {
+
+      const answerId = question.getAttribute("aria-controls");
+      const answer = document.getElementById(answerId);
+
+      if (!answer) return;
+
+      const isOpen =
+        question.getAttribute("aria-expanded") === "true";
+
+      if (isOpen) {
+        // Close
+        question.setAttribute("aria-expanded", "false");
+        answer.hidden = true;
+        answer.style.display = "none";
+
+      } else {
+        // Open
+        question.setAttribute("aria-expanded", "true");
+        answer.hidden = false;
+        answer.style.display = "block";
+      }
+
+    });
+
+  });
+
+});
+</script>
+
+</body>
+</html>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
 
-<script src="script.js"></script>
 
 </body>
 </html>

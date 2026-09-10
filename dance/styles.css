@@ -665,3 +665,31 @@ section h2,
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgba(255, 148, 14, 0.35);
 }
+
+/* ==========================================
+   MOBILE NAV — NO HAMBURGER
+   ========================================== */
+
+@media (max-width: 768px) {
+
+  .main-nav {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .main-nav li {
+    white-space: nowrap;
+  }
+
+  .main-nav a {
+    font-size: 0.95rem;
+  }
+
+}
