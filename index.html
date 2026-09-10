@@ -80,16 +80,14 @@ Practical Solutions for Busy Small Businesses
 
 
 <h1>
-Helping Small Business Owners Reclaim Their Time
+Helping Busy Small Business Owners Get Their Time Back
 </h1>
 
 
 <p class="hero-text">
 
 Running a business often means wearing too many hats.
-I help small business owners simplify daily operations,
-improve customer communication, and create systems that
-give them more time to focus on what matters most.
+I find the repetitive work, communication bottlenecks, and disconnected systems that are eating up your time — then help you simplify them.
 
 </p>
 
@@ -136,7 +134,7 @@ Simple improvements can make a big difference.
 
 <li>✔ Improve customer communication</li>
 
-<li>✔ Create easier systems</li>
+<li>✔ Automate repetitive tasks</li>
 
 <li>✔ Use technology with confidence</li>
 
@@ -206,7 +204,7 @@ Discover
 </h3>
 
 <p>
-Understand how your business works today.
+Understand how your business works.
 </p>
 
 </div>
@@ -224,7 +222,7 @@ Diagnose
 </h3>
 
 <p>
-Identify bottlenecks and time-consuming tasks.
+Find what's costing you time.
 </p>
 
 </div>
@@ -243,7 +241,7 @@ Design
 </h3>
 
 <p>
-Create solutions that fit your business.
+Build the right solution.
 </p>
 
 </div>
@@ -262,7 +260,7 @@ Deploy
 </h3>
 
 <p>
-Put new systems into action.
+Continue improving your systems as your business grows.
 </p>
 
 </div>
@@ -281,7 +279,7 @@ Develop
 </h3>
 
 <p>
-Continue improving as your business grows.
+Continue improving your systems as your business grows.
 </p>
 
 </div>
@@ -296,7 +294,101 @@ Continue improving as your business grows.
 </section>
 
 
+```html
+<!-- PROOF IN PRACTICE -->
+<section class="proof-practice">
+  <div class="container">
 
+    <div class="section-heading">
+      <p class="eyebrow">Real-World Experience</p>
+      <h2>Proof in Practice</h2>
+      <p>
+        I don't just recommend better systems. I build and use them.
+      </p>
+    </div>
+
+    <div class="proof-accordion">
+
+      <!-- PROOF 1 -->
+      <div class="proof-item">
+
+        <button
+          class="proof-question"
+          aria-expanded="true"
+          aria-controls="proof1">
+
+          <span>Customer Onboarding — Bean’s Dreams Dance</span>
+          <span class="proof-icon" aria-hidden="true">+</span>
+
+        </button>
+
+        <div id="proof1" class="proof-answer">
+          <p>
+            I created a structured onboarding experience that brings together
+            registration, required forms, payment, scheduling, Zoom
+            instructions, policies, FAQs, and a detailed welcome guide.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- PROOF 2 -->
+      <div class="proof-item">
+
+        <button
+          class="proof-question"
+          aria-expanded="false"
+          aria-controls="proof2">
+
+          <span>Personalized Client Work — Nick’s Mixes</span>
+          <span class="proof-icon" aria-hidden="true">+</span>
+
+        </button>
+
+        <div id="proof2" class="proof-answer" hidden>
+          <p>
+            A client-centered workflow designed around communication,
+            custom projects, revisions, delivery, and follow-up while
+            keeping the personal attention that each project requires.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- PROOF 3 -->
+      <div class="proof-item">
+
+        <button
+          class="proof-question"
+          aria-expanded="false"
+          aria-controls="proof3">
+
+          <span>Business Systems — Bean’s Dreams</span>
+          <span class="proof-icon" aria-hidden="true">+</span>
+
+        </button>
+
+        <div id="proof3" class="proof-answer" hidden>
+          <p>
+            Websites, scheduling, forms, payments, digital resources,
+            and customer processes working together as a connected
+            business system.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="proof-closing">
+      The right solution isn't always the most complicated one.
+      It's the one that makes sense for the business.
+    </p>
+
+  </div>
+</section>
 
 
 
@@ -498,8 +590,6 @@ Learn More About Me
 
 
 
-
-
 <!-- FINAL CTA -->
 
 
@@ -631,6 +721,53 @@ A Bean's Dreams Company
 </footer>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* -----------------------------
+     PROOF IN PRACTICE ACCORDION
+  ------------------------------*/
+
+  const proofQuestions =
+    document.querySelectorAll(".proof-question");
+
+  proofQuestions.forEach(function (question) {
+
+    question.addEventListener("click", function () {
+
+      const answerId =
+        question.getAttribute("aria-controls");
+
+      const answer =
+        document.getElementById(answerId);
+
+      if (!answer) return;
+
+      const isOpen =
+        question.getAttribute("aria-expanded") === "true";
+
+      if (isOpen) {
+
+        answer.hidden = true;
+        question.setAttribute("aria-expanded", "false");
+
+      } else {
+
+        answer.hidden = false;
+        question.setAttribute("aria-expanded", "true");
+
+      }
+
+    });
+
+  });
+
+});
+</script>
+
+
+</body>
+</html>
 
 
 </body>

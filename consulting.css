@@ -1029,3 +1029,236 @@ p {
 
 
 }
+
+```css
+/* ==========================================
+   PROOF IN PRACTICE ACCORDION
+   ========================================== */
+
+.proof-practice {
+  padding: 5rem 1.5rem;
+}
+
+.proof-accordion {
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+}
+
+.proof-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.proof-question {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.proof-question:hover {
+  opacity: 0.8;
+}
+
+.proof-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.proof-question[aria-expanded="true"] .proof-icon {
+  transform: rotate(45deg);
+}
+
+.proof-answer {
+  padding: 0 2rem 1.5rem 0;
+}
+
+.proof-answer p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.proof-closing {
+  max-width: 750px;
+  margin: 2.5rem auto 0;
+  text-align: center;
+  font-style: italic;
+}
+
+
+/* ==========================================
+   PROOF IN PRACTICE
+   ========================================== */
+
+.proof-practice {
+  padding: 5rem 1.5rem;
+  background: var(--light-bg);
+}
+
+.proof-practice .section-heading {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.proof-accordion {
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+}
+
+
+/* ==========================================
+   ACCORDION ITEMS
+   ========================================== */
+
+.proof-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ==========================================
+   QUESTION
+   ========================================== */
+
+.proof-question {
+  width: 100%;
+  border: none;
+  background: var(--white);
+  color: var(--navy);
+
+  padding: 1.25rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  text-align: left;
+  font: inherit;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.proof-question:hover {
+  background: var(--cream);
+}
+
+
+/* ==========================================
+   OPEN QUESTION
+   ========================================== */
+
+.proof-question[aria-expanded="true"] {
+  background: var(--cream);
+  color: var(--navy);
+}
+
+
+/* ==========================================
+   PLUS ICON
+   ========================================== */
+
+.proof-icon {
+  flex-shrink: 0;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--orange);
+  color: var(--white);
+
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1;
+
+  transition: transform 0.25s ease;
+}
+
+.proof-question[aria-expanded="true"] .proof-icon {
+  transform: rotate(45deg);
+}
+
+
+/* ==========================================
+   ANSWER
+   ========================================== */
+
+.proof-answer {
+  padding: 0 1.5rem 1.5rem;
+  background: var(--cream);
+}
+
+.proof-answer p {
+  max-width: 800px;
+  margin: 0;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+
+/* ==========================================
+   CLOSING STATEMENT
+   ========================================== */
+
+.proof-closing {
+  max-width: 750px;
+  margin: 2.5rem auto 0;
+
+  text-align: center;
+
+  color: var(--navy);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+  .proof-practice {
+    padding: 4rem 1rem;
+  }
+
+  .proof-question {
+    padding: 1.1rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .proof-answer {
+    padding: 0 1rem 1.25rem;
+  }
+
+  .proof-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+  }
+
+}
