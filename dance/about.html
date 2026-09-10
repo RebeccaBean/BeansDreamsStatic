@@ -219,6 +219,7 @@
 
   <div class="footer-businesses">
 
+      <!-- CONSULTING -->
       <a href="https://beansdreams.org" class="footer-business">
           <span class="footer-icon">💼</span>
           <div>
@@ -227,6 +228,7 @@
           </div>
       </a>
 
+      <!-- DANCE -->
       <a href="https://beansdreams.org/dance" class="footer-business current-site">
           <span class="footer-icon">💃</span>
           <div>
@@ -235,6 +237,7 @@
           </div>
       </a>
 
+      <!-- AUDIO -->
       <a href="https://beansdreams.org/audio" class="footer-business">
           <span class="footer-icon">🎧</span>
           <div>
@@ -251,32 +254,56 @@
   </div>
 </footer>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Initialize AOS animations
   AOS.init({
     duration: 700,
     once: true
   });
 
+  // ==========================================
+  // OUR JOURNEY ACCORDION
+  // ==========================================
+
   const questions = document.querySelectorAll(".faq-question");
 
-  questions.forEach(question => {
-    question.addEventListener("click", () => {
+  questions.forEach(function (question) {
+
+    question.addEventListener("click", function () {
+
       const answerId = question.getAttribute("aria-controls");
       const answer = document.getElementById(answerId);
 
       if (!answer) return;
 
-      const isOpen = question.getAttribute("aria-expanded") === "true";
+      const isOpen =
+        question.getAttribute("aria-expanded") === "true";
 
-      // Toggle aria-expanded
-      question.setAttribute("aria-expanded", String(!isOpen));
+      if (isOpen) {
 
-      // Toggle display (matches your CSS)
-      answer.style.display = isOpen ? "none" : "block";
+        // Close the answer
+        question.setAttribute("aria-expanded", "false");
+        answer.style.display = "none";
+
+      } else {
+
+        // Open the answer
+        question.setAttribute("aria-expanded", "true");
+        answer.style.display = "block";
+
+      }
+
     });
+
   });
 
 });
 </script>
+
+</body>
+</html>
